@@ -11,4 +11,5 @@ class Place {
     var id: String = String()
     var lat: Double = Double()
     var lon: Double = Double()
+    var distance: Double = Double()
 }

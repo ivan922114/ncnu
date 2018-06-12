@@ -9,9 +9,10 @@
 import UIKit
 
 class departmentTableViewController: UITableViewController {
-
+    
     var departmentID = ["中文系":"M100","外文系":"M200","社工系":"M400","公行系":"M500","歷史系":"M600","東南亞系":"M800","華文碩士學程":"MD00","非營利組織經營管理碩士學位學程":"MF00","原鄉發展學士專班":"MG00","國企系":"N100","經濟系":"N200","資管系":"N300","財金系":"N400","觀光餐旅系":"N500","管理學學位學程":"N600","新興產業策略與發展學位學程":"N800","土木系":"O100","資工系":"O200","電機系":"O300","應化系":"O400","應光系":"O800","國比系":"M300","教政系":"M700","諮人系":"MA00","課科所":"MC00","終身學習與人資專班":"ME00","其他":"U000"]
-    var department = [""]
+    var department: Array<String> = []
+    
     
     
     override func viewDidLoad() {
@@ -27,12 +28,13 @@ class departmentTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        for (key, _) in departmentID {
-            department.append("\(key)")
+        
+        let sortedDepartment = departmentID.sorted { first, second in
+            return first.1 < second.1
         }
-        department.remove(at: 0)
-        print(departmentID)
-        print(department)
+        for (key,_) in sortedDepartment{
+            department.append(key)
+        }
     }
 
     override func didReceiveMemoryWarning() {

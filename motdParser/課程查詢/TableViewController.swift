@@ -108,6 +108,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! coursesTableViewCell
+        courses.sort(by: {$0.time < $1.time})
         let course = courses[indexPath.row]
         cell.teacher.text = course.teacher
         cell.time.text = course.time
