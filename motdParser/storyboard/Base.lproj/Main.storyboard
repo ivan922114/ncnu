@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-E6-I52">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -154,14 +154,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ncnu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="T76-it-Wjc">
-                                <rect key="frame" x="16" y="60" width="343" height="80"/>
+                                <rect key="frame" x="16" y="104" width="343" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="O5q-Ye-QRb"/>
                                     <constraint firstAttribute="width" constant="343" id="rUw-zt-3Xb"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qMq-WQ-21N">
-                                <rect key="frame" x="16" y="176" width="343" height="346"/>
+                                <rect key="frame" x="16" y="220" width="343" height="346"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95h-4g-y88">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
@@ -373,7 +373,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-tb-Z9B">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -445,7 +445,7 @@
             </objects>
             <point key="canvasLocation" x="-986.39999999999998" y="887.40629685157433"/>
         </scene>
-        <!--Map Table View Controller-->
+        <!--分類-->
         <scene sceneID="Wvm-DL-dMJ">
             <objects>
                 <tableViewController id="5jc-HB-KGM" customClass="mapTableViewController" customModule="motdParser" customModuleProvider="target" sceneMemberID="viewController">
@@ -484,6 +484,9 @@
                             <outlet property="delegate" destination="5jc-HB-KGM" id="Rh1-q8-ldq"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="分類" id="HWL-ts-FwM"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJr-mr-Jyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,15 +501,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dYA-Qm-nRm" customClass="placesTableViewCell" customModule="motdParser" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="rja-2K-0Sm" style="IBUITableViewCellStyleDefault" id="dYA-Qm-nRm" customClass="placesTableViewCell" customModule="motdParser" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dYA-Qm-nRm" id="kKW-L9-V5i">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rja-2K-0Sm">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="5jc-HB-KGM" kind="showDetail" id="fP2-xL-851"/>
+                                    <segue destination="5jc-HB-KGM" kind="show" identifier="showPlaces" id="fP2-xL-851"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -599,6 +611,6 @@
         <image name="ncnu_logo" width="1045" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wjP-Qp-4aS"/>
+        <segue reference="LJs-gB-DwV"/>
     </inferredMetricsTieBreakers>
 </document>

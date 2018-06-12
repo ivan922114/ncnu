@@ -19,11 +19,7 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     var distance = CLLocationDistance()
     var currentLocation = CLLocation()
     
-    enum xmlType: String {
-        case parking = "parking"
-        case toilets = "toilets"
-    }
-    var apiUrl: String = "http://www.overpass-api.de/api/xapi?*[amenity=\(xmlType.toilets.rawValue)][bbox=120.92246,23.9439,120.93623,23.9575]"
+    var apiUrl = String()
     var locationManager : CLLocationManager!
     
     func getDatas(apiUrl: String) {
@@ -62,7 +58,6 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        self.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = false
         
