@@ -13,12 +13,12 @@ import GoogleMaps
 
 class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,CLLocationManagerDelegate{
     
-    enum xmlTag: String {
-        case node = "node"
-        case id = "id"
-        case lat = "lat"
-        case lon = "lon"
-    }
+//    enum xmlTag: String {
+//        case node = "node"
+//        case id = "id"
+//        case lat = "lat"
+//        case lon = "lon"
+//    }
     
     enum xmlType: String {
         case parking = "parking"

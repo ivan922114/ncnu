@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16107AC920CFBBBC00E20698 /* place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16107AC820CFBBBC00E20698 /* place.swift */; };
+		16107ACB20CFC02400E20698 /* xapi in Resources */ = {isa = PBXBuildFile; fileRef = 16107ACA20CFC02400E20698 /* xapi */; };
 		165D9C3C209960000036E8B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C3B209960000036E8B3 /* AppDelegate.swift */; };
 		165D9C41209960000036E8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165D9C3F209960000036E8B3 /* Main.storyboard */; };
 		165D9C43209960010036E8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165D9C42209960010036E8B3 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16107AC820CFBBBC00E20698 /* place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = place.swift; sourceTree = "<group>"; };
+		16107ACA20CFC02400E20698 /* xapi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = xapi; sourceTree = "<group>"; };
 		165D9C38209960000036E8B3 /* motdParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motdParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165D9C3B209960000036E8B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165D9C40209960000036E8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,9 +143,11 @@
 		16BC1E4220CADE8C00C6C666 /* 地圖 */ = {
 			isa = PBXGroup;
 			children = (
+				16107ACA20CFC02400E20698 /* xapi */,
 				AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */,
 				16BC1E4320CADEA400C6C666 /* mapViewController.swift */,
 				AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */,
+				16107AC820CFBBBC00E20698 /* place.swift */,
 			);
 			path = "地圖";
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				AFEBDA8620C2CD4C00AE8B79 /* NotoSansCJKtc-Light.otf in Resources */,
 				AFEBDA7520C2CB0500AE8B79 /* setofont.ttf in Resources */,
 				AFEBDA8720C2CD4C00AE8B79 /* NotoSansCJKtc-Regular.otf in Resources */,
+				16107ACB20CFC02400E20698 /* xapi in Resources */,
 				AF189ED220C66F0A0028D71E /* data.xml in Resources */,
 				165D9C43209960010036E8B3 /* Assets.xcassets in Resources */,
 				AFEBDA8220C2CD4C00AE8B79 /* NotoSansMonoCJKtc-Bold.otf in Resources */,
@@ -350,6 +357,7 @@
 				AFACABF220CFB35C00E905A6 /* mapTableViewCell.swift in Sources */,
 				AF5FA0CD20CFABCC00CD19A0 /* mapTableViewController.swift in Sources */,
 				165D9C3C209960000036E8B3 /* AppDelegate.swift in Sources */,
+				16107AC920CFBBBC00E20698 /* place.swift in Sources */,
 				16C8E566209B718F000A0E12 /* motdDetailsViewController.swift in Sources */,
 				165D9C4E209960560036E8B3 /* motdTableViewController.swift in Sources */,
 			);
