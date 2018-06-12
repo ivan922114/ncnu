@@ -31,7 +31,7 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
         self.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = false
-        
+        refreshControl?.addTarget(self, action: #selector(motdTableViewController.getLatestMotds), for: UIControlEvents.valueChanged)
         getLatestMotds()
     }
     
@@ -72,7 +72,7 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
     
     // MARK: - Helper methods
     
-    func getLatestMotds() {
+    @objc func getLatestMotds() {
         guard let motdUrl = URL(string: motdURL) else {
             return
         }
@@ -92,6 +92,7 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
                 // Reload table view
                 OperationQueue.main.addOperation({
                     self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
                 })
             }
         })

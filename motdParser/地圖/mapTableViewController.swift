@@ -62,6 +62,7 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        self.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = false
         
@@ -71,7 +72,6 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         getDatas(apiUrl: apiUrl)
-        
     }
     
     var currentNodeName:String!

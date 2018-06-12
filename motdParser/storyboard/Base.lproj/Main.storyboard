@@ -73,6 +73,17 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ftC-hU-pTZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="下拉更新喔">
+                                <attributes>
+                                    <font key="NSFont" size="11" name=".PingFangTC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSw-xZ-uye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-E6-I52">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -142,14 +153,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ncnu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="T76-it-Wjc">
-                                <rect key="frame" x="16" y="104" width="343" height="80"/>
+                                <rect key="frame" x="16" y="60" width="343" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="O5q-Ye-QRb"/>
                                     <constraint firstAttribute="width" constant="343" id="rUw-zt-3Xb"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qMq-WQ-21N">
-                                <rect key="frame" x="16" y="220" width="343" height="346"/>
+                                <rect key="frame" x="16" y="176" width="343" height="346"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95h-4g-y88">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
@@ -347,7 +358,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-tb-Z9B">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -419,7 +430,7 @@
             </objects>
             <point key="canvasLocation" x="-985" y="888"/>
         </scene>
-        <!--Map Table View Controller-->
+        <!--設施分類-->
         <scene sceneID="Wvm-DL-dMJ">
             <objects>
                 <tableViewController id="5jc-HB-KGM" customClass="mapTableViewController" customModule="motdParser" customModuleProvider="target" sceneMemberID="viewController">
@@ -458,6 +469,13 @@
                             <outlet property="delegate" destination="5jc-HB-KGM" id="Rh1-q8-ldq"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="設施分類" id="Fys-0Q-uvl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="5fh-MR-wMj">
+                            <connections>
+                                <segue destination="fkk-TN-vLc" kind="show" id="bZV-rr-kPk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJr-mr-Jyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -535,6 +553,6 @@
         <image name="ncnu_logo" width="1045" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LJs-gB-DwV"/>
+        <segue reference="bZV-rr-kPk"/>
     </inferredMetricsTieBreakers>
 </document>
