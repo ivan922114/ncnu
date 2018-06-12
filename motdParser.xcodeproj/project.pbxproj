@@ -30,6 +30,8 @@
 		AF55038820ABD1DF0036DB44 /* motdMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55038720ABD1DF0036DB44 /* motdMenuTableViewCell.swift */; };
 		AF55038A20ABD4340036DB44 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55038920ABD4340036DB44 /* MenuTransitionManager.swift */; };
 		AF5FA0CD20CFABCC00CD19A0 /* mapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */; };
+		AF871E3D20D0315A00403C37 /* placesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF871E3C20D0315A00403C37 /* placesTableViewController.swift */; };
+		AF871E4E20D0328E00403C37 /* placesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF871E4D20D0328E00403C37 /* placesTableViewCell.swift */; };
 		AFACABF220CFB35C00E905A6 /* mapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */; };
 		AFEBDA7420C2CB0500AE8B79 /* setofont-ex.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7220C2CB0200AE8B79 /* setofont-ex.ttf */; };
 		AFEBDA7520C2CB0500AE8B79 /* setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7320C2CB0400AE8B79 /* setofont.ttf */; };
@@ -72,6 +74,8 @@
 		AF55038720ABD1DF0036DB44 /* motdMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdMenuTableViewCell.swift; sourceTree = "<group>"; };
 		AF55038920ABD4340036DB44 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapTableViewController.swift; sourceTree = "<group>"; };
+		AF871E3C20D0315A00403C37 /* placesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placesTableViewController.swift; sourceTree = "<group>"; };
+		AF871E4D20D0328E00403C37 /* placesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placesTableViewCell.swift; sourceTree = "<group>"; };
 		AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapTableViewCell.swift; sourceTree = "<group>"; };
 		AFEBDA7220C2CB0200AE8B79 /* setofont-ex.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "setofont-ex.ttf"; sourceTree = "<group>"; };
 		AFEBDA7320C2CB0400AE8B79 /* setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = setofont.ttf; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */,
 				16BC1E4320CADEA400C6C666 /* mapViewController.swift */,
 				AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */,
+				AF871E3C20D0315A00403C37 /* placesTableViewController.swift */,
+				AF871E4D20D0328E00403C37 /* placesTableViewCell.swift */,
 				16107AC820CFBBBC00E20698 /* place.swift */,
 			);
 			path = "地圖";
@@ -343,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16BC1E4420CADEA400C6C666 /* mapViewController.swift in Sources */,
+				AF871E3D20D0315A00403C37 /* placesTableViewController.swift in Sources */,
 				165D9C502099679E0036E8B3 /* motd.swift in Sources */,
 				AF189ED120C66F0A0028D71E /* departmentTableViewController.swift in Sources */,
 				AF189ED620C66F0A0028D71E /* Courses.swift in Sources */,
@@ -352,6 +359,7 @@
 				AF189ED320C66F0A0028D71E /* coursesTableViewCell.swift in Sources */,
 				AF55038620ABD0F10036DB44 /* motdMenuTableViewController.swift in Sources */,
 				AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */,
+				AF871E4E20D0328E00403C37 /* placesTableViewCell.swift in Sources */,
 				AF55038A20ABD4340036DB44 /* MenuTransitionManager.swift in Sources */,
 				AF525AA220B512CA00A933C7 /* HomeScreenViewController.swift in Sources */,
 				AFACABF220CFB35C00E905A6 /* mapTableViewCell.swift in Sources */,
