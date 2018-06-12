@@ -28,7 +28,7 @@
 		AF55038820ABD1DF0036DB44 /* motdMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55038720ABD1DF0036DB44 /* motdMenuTableViewCell.swift */; };
 		AF55038A20ABD4340036DB44 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55038920ABD4340036DB44 /* MenuTransitionManager.swift */; };
 		AF5FA0CD20CFABCC00CD19A0 /* mapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */; };
-		AF5FA0DC20CFADAA00CD19A0 /* mapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FA0DB20CFADAA00CD19A0 /* mapTableViewCell.swift */; };
+		AFACABF220CFB35C00E905A6 /* mapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */; };
 		AFEBDA7420C2CB0500AE8B79 /* setofont-ex.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7220C2CB0200AE8B79 /* setofont-ex.ttf */; };
 		AFEBDA7520C2CB0500AE8B79 /* setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7320C2CB0400AE8B79 /* setofont.ttf */; };
 		AFEBDA7F20C2CD4C00AE8B79 /* NotoSansCJKtc-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7620C2CD4700AE8B79 /* NotoSansCJKtc-Medium.otf */; };
@@ -68,7 +68,7 @@
 		AF55038720ABD1DF0036DB44 /* motdMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdMenuTableViewCell.swift; sourceTree = "<group>"; };
 		AF55038920ABD4340036DB44 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapTableViewController.swift; sourceTree = "<group>"; };
-		AF5FA0DB20CFADAA00CD19A0 /* mapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mapTableViewCell.swift; path = "/Users/viplab/Desktop/motdParser/motdParser/地圖/mapTableViewCell.swift"; sourceTree = "<absolute>"; };
+		AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapTableViewCell.swift; sourceTree = "<group>"; };
 		AFEBDA7220C2CB0200AE8B79 /* setofont-ex.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "setofont-ex.ttf"; sourceTree = "<group>"; };
 		AFEBDA7320C2CB0400AE8B79 /* setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = setofont.ttf; sourceTree = "<group>"; };
 		AFEBDA7620C2CD4700AE8B79 /* NotoSansCJKtc-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-Medium.otf"; sourceTree = "<group>"; };
@@ -139,9 +139,9 @@
 		16BC1E4220CADE8C00C6C666 /* 地圖 */ = {
 			isa = PBXGroup;
 			children = (
+				AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */,
 				16BC1E4320CADEA400C6C666 /* mapViewController.swift */,
 				AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */,
-				AF5FA0DB20CFADAA00CD19A0 /* mapTableViewCell.swift */,
 			);
 			path = "地圖";
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 				AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */,
 				AF55038A20ABD4340036DB44 /* MenuTransitionManager.swift in Sources */,
 				AF525AA220B512CA00A933C7 /* HomeScreenViewController.swift in Sources */,
-				AF5FA0DC20CFADAA00CD19A0 /* mapTableViewCell.swift in Sources */,
+				AFACABF220CFB35C00E905A6 /* mapTableViewCell.swift in Sources */,
 				AF5FA0CD20CFABCC00CD19A0 /* mapTableViewController.swift in Sources */,
 				165D9C3C209960000036E8B3 /* AppDelegate.swift in Sources */,
 				16C8E566209B718F000A0E12 /* motdDetailsViewController.swift in Sources */,

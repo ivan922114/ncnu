@@ -8,7 +8,7 @@
 import UIKit
 
 class mapTableViewCell: UITableViewCell {
-
+    //github test
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
