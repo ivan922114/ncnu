@@ -68,6 +68,7 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         getDatas(apiUrl: apiUrl)
+        
     }
     
     var currentNodeName:String!
@@ -119,7 +120,6 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         cell.textLabel?.text = places[indexPath.row].id
-
         return cell
     }
 
