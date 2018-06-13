@@ -29,37 +29,37 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
         switch SegmentedControl.selectedSegmentIndex {
         case 0:
             apiUrl = "http://www.overpass-api.de/api/xapi?node[amenity=parking][bbox=120.92246,23.9439,120.93623,23.9575]"
-            getData(apiUrl: apiUrl)
+            getDatas(apiUrl: apiUrl)
         case 1:
             apiUrl = "http://www.overpass-api.de/api/xapi?node[amenity=toilets][bbox=120.92246,23.9439,120.93623,23.9575]"
-            getData(apiUrl: apiUrl)
+            getDatas(apiUrl: apiUrl)
         case 2:
             apiUrl = "http://www.overpass-api.de/api/xapi?node[amenity=drinking_water][bbox=120.92246,23.9439,120.93623,23.9575]"
-            getData(apiUrl: apiUrl)
+            getDatas(apiUrl: apiUrl)
         case 3:
             apiUrl = "http://www.overpass-api.de/api/xapi?node[amenity=atm][bbox=120.92246,23.9439,120.93623,23.9575]"
-            getData(apiUrl: apiUrl)
+            getDatas(apiUrl: apiUrl)
         case 4:
             apiUrl = "http://www.overpass-api.de/api/xapi?node[name=%E6%A0%A1%E8%BB%8A%E7%AB%99%E7%89%8C][bbox=120.92188,23.94296,120.98162,23.97198]"
-            getData(apiUrl: apiUrl)
+            getDatas(apiUrl: apiUrl)
         default:
             break
         }
     }
     
-    func getData(apiUrl: String){
-        do{
-            let url = URL(string: apiUrl)
-            let data = try Data(contentsOf: url!)
-            // Parse XML data
-            mapView.clear()
-            let parser = XMLParser(data: data)
-            parser.delegate = self
-            parser.parse()
-        }catch{
-            print("error")
-        }
-    }
+//    func getData(apiUrl: String){
+//        do{
+//            let url = URL(string: apiUrl)
+//            let data = try Data(contentsOf: url!)
+//            // Parse XML data
+//            mapView.clear()
+//            let parser = XMLParser(data: data)
+//            parser.delegate = self
+//            parser.parse()
+//        }catch{
+//            print("error")
+//        }
+//    }
     
     func getDatas(apiUrl: String){
         let url = URL(string: apiUrl)
@@ -73,10 +73,19 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
                 return
             }
             // Parse XML data
+            self.mapView.clear()
+            self.places.removeAll()
             let parser = XMLParser(data: data)
+            print(self.places.count)
             parser.delegate = self
             parser.parse()
-            
+            print(self.places.count)
+            for place in self.places{
+                let marker = GMSMarker()
+                marker.map = self.mapView
+                marker.position = CLLocationCoordinate2D(latitude: place.lat, longitude: place.lon)
+                marker.snippet = self.SegmentedControl.titleForSegment(at: self.selectedIndex)
+            }
         })
         task.resume()
     }
@@ -93,7 +102,7 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
         locationManager.startUpdatingLocation()
         
         // mapview
-        getData(apiUrl: apiUrl)
+        getDatas(apiUrl: apiUrl)
         mapView.layer.borderWidth = 2
         mapView.layer.borderColor = UIColor.black.cgColor
         mapView.settings.compassButton = true
@@ -102,16 +111,40 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
         mapView.delegate = self
     }
     
-    var currentNodeName:String!
+    var places: [Place] = []
+    var id = String()
+    var lat = Double()
+    var lon = Double()
+    var name = String()
+    var distance = CLLocationDistance()
+    var currentLocation = CLLocation()
+    
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-        currentNodeName = elementName
-        if elementName == "node"{
-            let lat:Double = atof(attributeDict["lat"])
-            let lon:Double = atof(attributeDict["lon"])
-            let marker = GMSMarker()
-            marker.map = mapView
-            marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            marker.snippet = "Hello World!"
+        let currentNodeName = elementName
+        switch currentNodeName {
+        case "node":
+            id = attributeDict["id"]!
+            lat = atof(attributeDict["lat"])
+            lon = atof(attributeDict["lon"])
+            distance = currentLocation.distance(from: CLLocation(latitude: lat, longitude: lon))
+        case "tag":
+            if attributeDict["k"] == "name"{
+                name = attributeDict["v"]!
+            }
+        default:
+            break
+        }
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if elementName == "node" {
+            let place = Place()
+            place.id = id
+            place.lat = lat
+            place.lon = lon
+            place.distance = distance
+            place.name = name
+            places.append(place)
         }
     }
     

@@ -68,7 +68,6 @@ class placesTableViewController: UITableViewController {
                 destinationController.navigationItem.title = place[indexPath.row]
                 destinationController.apiUrl = placetype[place[indexPath.row]]!
                 destinationController.selectedIndex = indexPath.row
-                print("index:\(indexPath.row)")
             }
         }
     }

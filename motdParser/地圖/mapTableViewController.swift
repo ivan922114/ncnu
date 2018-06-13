@@ -17,11 +17,8 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     var lon: Double = Double()
     var name: String = String()
     var selectedIndex = Int()
-    
-    var time = 0
     var distance = CLLocationDistance()
     var currentLocation = CLLocation()
-    
     var apiUrl = String()
     var locationManager : CLLocationManager!
     
@@ -32,17 +29,14 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         
         let request = URLRequest(url: apiUrl)
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
-            
             if let error = error {
                 print(error)
                 return
             }
-            
             if let data = data {
                 let parser = XMLParser(data: data)
                 parser.delegate = self
                 parser.parse()
-                
                 // Reload table view
                 OperationQueue.main.addOperation({
                     self.tableView.reloadData()
@@ -70,22 +64,22 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         getDatas(apiUrl: apiUrl)
-        print("selected:\(selectedIndex)")
     }
     
-    var currentNodeName:String!
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-        currentNodeName = elementName
-        if currentNodeName == "node"{
+        let currentNodeName = elementName
+        switch currentNodeName {
+        case "node":
             id = attributeDict["id"]!
             lat = atof(attributeDict["lat"])
             lon = atof(attributeDict["lon"])
             distance = currentLocation.distance(from: CLLocation(latitude: lat, longitude: lon))
-        }
-        if currentNodeName == "tag"{
+        case "tag":
             if attributeDict["k"] == "name"{
                 name = attributeDict["v"]!
             }
+        default:
+            break
         }
     }
     
@@ -103,8 +97,6 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let curLocation:CLLocation = locations[0]
-        time += 1
-//        print(time)
         currentLocation = curLocation
         locationManager.stopUpdatingLocation()
     }
@@ -138,13 +130,13 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMapView"{
+        switch segue.identifier {
+        case "showMapView":
             let destinationController = segue.destination as! mapViewController
             destinationController.navigationItem.title = navigationItem.title
             destinationController.apiUrl = apiUrl
             destinationController.selectedIndex = selectedIndex
-        }
-        if segue.identifier == "showDetailView"{
+        case "showDetailView":
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationController = segue.destination as! mapDetailViewController
                 destinationController.navigationItem.title = places[indexPath.row].name
@@ -152,6 +144,8 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
                 destinationController.lon = places[indexPath.row].lon
                 destinationController.name = places[indexPath.row].name
             }
+        default:
+            break
         }
     }
     /*
