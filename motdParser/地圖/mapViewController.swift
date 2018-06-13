@@ -15,6 +15,7 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
     var apiUrl: String = String()
     var time = 0
     var selectedIndex = Int()
+    var locationManager : CLLocationManager!
     
     @IBOutlet weak var SegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: GMSMapView!
@@ -45,8 +46,6 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
             break
         }
     }
-    
-    var locationManager : CLLocationManager!
     
     func getData(apiUrl: String){
         do{
@@ -86,16 +85,15 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
         super.viewDidLoad()
         SegmentedControl.selectedSegmentIndex = selectedIndex
         
-        //corelocation
+        // corelocation
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
         // mapview
         getData(apiUrl: apiUrl)
-        mapView.camera = GMSCameraPosition.camera(withLatitude: 23.9504, longitude: 120.9299, zoom: 16.5)
         mapView.layer.borderWidth = 2
         mapView.layer.borderColor = UIColor.black.cgColor
         mapView.settings.compassButton = true
@@ -117,11 +115,10 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let curLocation:CLLocation = locations[0]
-        self.mapView.camera = GMSCameraPosition.camera(withLatitude: curLocation.coordinate.latitude, longitude: curLocation.coordinate.longitude, zoom: 16.5)
-        time += 1
-//        print(time)
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let curLat = locations[0].coordinate.latitude
+        let curLon = locations[0].coordinate.longitude
+        self.mapView.camera = GMSCameraPosition.camera(withLatitude: curLat, longitude: curLon, zoom: 16.5)
         locationManager.stopUpdatingLocation()
     }
     
