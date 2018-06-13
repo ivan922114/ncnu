@@ -75,8 +75,16 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
             lon = atof(attributeDict["lon"])
             distance = currentLocation.distance(from: CLLocation(latitude: lat, longitude: lon))
         case "tag":
-            if attributeDict["k"] == "name"{
+            if attributeDict["k"] == "name" && selectedIndex != 4{
                 name = attributeDict["v"]!
+            }else if selectedIndex == 4{
+                if attributeDict["k"] == "description"{
+                    name = attributeDict["v"]!
+                }
+            }else if selectedIndex == 3{
+                if attributeDict["k"] == "operator"{
+                    name = attributeDict["v"]!
+                }
             }
         default:
             break

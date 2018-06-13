@@ -501,7 +501,7 @@
             </objects>
             <point key="canvasLocation" x="1462" y="-774"/>
         </scene>
-        <!--Map Detail View Controller-->
+        <!--Title-->
         <scene sceneID="iBZ-Ta-pVa">
             <objects>
                 <viewController id="8MN-7H-5aP" customClass="mapDetailViewController" customModule="motdParser" customModuleProvider="target" sceneMemberID="viewController">
@@ -509,27 +509,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HJ-8A-nW9" customClass="GMSPanoramaView">
+                                <rect key="frame" x="0.0" y="338" width="375" height="285"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-eB-ROQ" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="264"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="S6w-eB-ROQ" firstAttribute="top" secondItem="KaU-ev-PyA" secondAttribute="top" id="UZi-M1-dhj"/>
-                            <constraint firstItem="S6w-eB-ROQ" firstAttribute="trailing" secondItem="KaU-ev-PyA" secondAttribute="trailing" id="eFd-8z-0VT"/>
-                            <constraint firstItem="KaU-ev-PyA" firstAttribute="bottom" secondItem="S6w-eB-ROQ" secondAttribute="bottom" id="fi2-Ux-emz"/>
-                            <constraint firstItem="S6w-eB-ROQ" firstAttribute="leading" secondItem="KaU-ev-PyA" secondAttribute="leading" id="zhp-5H-YRT"/>
+                            <constraint firstItem="S6w-eB-ROQ" firstAttribute="leading" secondItem="KaU-ev-PyA" secondAttribute="leading" id="3dW-rB-IPL"/>
+                            <constraint firstItem="1HJ-8A-nW9" firstAttribute="bottom" secondItem="KaU-ev-PyA" secondAttribute="bottom" id="HuC-CL-ZEW"/>
+                            <constraint firstItem="1HJ-8A-nW9" firstAttribute="leading" secondItem="KaU-ev-PyA" secondAttribute="leading" id="RKr-0z-S92"/>
+                            <constraint firstItem="S6w-eB-ROQ" firstAttribute="top" secondItem="KaU-ev-PyA" secondAttribute="top" id="fQi-MJ-Xyx"/>
+                            <constraint firstItem="1HJ-8A-nW9" firstAttribute="top" secondItem="p4L-0A-iKM" secondAttribute="top" constant="338" id="i25-Nd-qFw"/>
+                            <constraint firstItem="1HJ-8A-nW9" firstAttribute="trailing" secondItem="KaU-ev-PyA" secondAttribute="trailing" id="ljY-mZ-QvD"/>
+                            <constraint firstItem="S6w-eB-ROQ" firstAttribute="trailing" secondItem="KaU-ev-PyA" secondAttribute="trailing" id="snW-bE-NpY"/>
+                            <constraint firstItem="1HJ-8A-nW9" firstAttribute="top" secondItem="S6w-eB-ROQ" secondAttribute="bottom" constant="10" id="wE6-cp-ebM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KaU-ev-PyA"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="I0s-GM-R7H"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="S6w-eB-ROQ" id="ozN-ff-Zl9"/>
+                        <outlet property="panoramaView" destination="1HJ-8A-nW9" id="rLh-Me-WVM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twH-dS-wUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="-774"/>
+            <point key="canvasLocation" x="2229.5999999999999" y="-774.06296851574223"/>
         </scene>
         <!--設施分類-->
         <scene sceneID="cEH-A9-9v3">
@@ -578,7 +590,7 @@
             </objects>
             <point key="canvasLocation" x="713" y="-774"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Title-->
         <scene sceneID="pxn-Po-TdZ">
             <objects>
                 <viewController id="BJ2-fg-9Qs" customClass="mapViewController" customModule="motdParser" customModuleProvider="target" sceneMemberID="viewController">
@@ -616,6 +628,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IIx-Dq-R5K"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="rlx-7D-7ID"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="SegmentedControl" destination="wXx-v1-KJ2" id="kfm-wm-xYU"/>
                         <outlet property="mapView" destination="0tZ-bU-4ue" id="U4Z-C1-1Cf"/>

@@ -17,6 +17,7 @@
 		165D9C4E209960560036E8B3 /* motdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C4D209960560036E8B3 /* motdTableViewController.swift */; };
 		165D9C502099679E0036E8B3 /* motd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C4F2099679E0036E8B3 /* motd.swift */; };
 		165D9C5220996A670036E8B3 /* motdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C5120996A670036E8B3 /* motdTableViewCell.swift */; };
+		167380A120D1208C00E982E5 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167380A020D1208C00E982E5 /* PlaceViewController.swift */; };
 		16BC1E4420CADEA400C6C666 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC1E4320CADEA400C6C666 /* mapViewController.swift */; };
 		16C8E566209B718F000A0E12 /* motdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C8E565209B718F000A0E12 /* motdDetailsViewController.swift */; };
 		7EEE661180C1476E0C042E94 /* libPods-motdParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6652961FA149FE66B3FCAEE8 /* libPods-motdParser.a */; };
@@ -60,6 +61,7 @@
 		165D9C4D209960560036E8B3 /* motdTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdTableViewController.swift; sourceTree = "<group>"; };
 		165D9C4F2099679E0036E8B3 /* motd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motd.swift; sourceTree = "<group>"; };
 		165D9C5120996A670036E8B3 /* motdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdTableViewCell.swift; sourceTree = "<group>"; };
+		167380A020D1208C00E982E5 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		16BC1E4320CADEA400C6C666 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		16C8E565209B718F000A0E12 /* motdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdDetailsViewController.swift; sourceTree = "<group>"; };
 		2C565074DE675C34447A19D1 /* Pods-motdParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motdParser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motdParser/Pods-motdParser.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				AF871E3C20D0315A00403C37 /* placesTableViewController.swift */,
 				AF871E4D20D0328E00403C37 /* placesTableViewCell.swift */,
 				16107AC820CFBBBC00E20698 /* place.swift */,
+				167380A020D1208C00E982E5 /* PlaceViewController.swift */,
 			);
 			path = "地圖";
 			sourceTree = "<group>";
@@ -314,11 +317,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-motdParser/Pods-motdParser-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167380A120D1208C00E982E5 /* PlaceViewController.swift in Sources */,
 				16BC1E4420CADEA400C6C666 /* mapViewController.swift in Sources */,
 				AF871E3D20D0315A00403C37 /* placesTableViewController.swift in Sources */,
 				165D9C502099679E0036E8B3 /* motd.swift in Sources */,

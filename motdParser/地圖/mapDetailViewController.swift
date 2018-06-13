@@ -12,6 +12,8 @@ import GoogleMaps
 class mapDetailViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate{
 
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet var panoramaView: GMSPanoramaView!
+    
 //    var locationManager : CLLocationManager!
     var lat = Double()
     var lon = Double()
@@ -25,6 +27,7 @@ class mapDetailViewController: UIViewController, GMSMapViewDelegate,CLLocationMa
         mapView.camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lon, zoom: 16.5)
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
+        mapView.settings.scrollGestures = false
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
         marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
@@ -32,8 +35,9 @@ class mapDetailViewController: UIViewController, GMSMapViewDelegate,CLLocationMa
         marker.appearAnimation = GMSMarkerAnimation.pop
         marker.map = mapView
         marker.snippet = "\(name)"
-//        mapView.layer.borderWidth = 2
-//        mapView.layer.borderColor = UIColor.black.cgColor
+        
+        // panoView
+        panoramaView.moveNearCoordinate(CLLocationCoordinate2D(latitude: lat, longitude: lon))
         
     }
 
