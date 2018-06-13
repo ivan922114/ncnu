@@ -15,6 +15,9 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     var id: String = String()
     var lat: Double = Double()
     var lon: Double = Double()
+    var name: String = String()
+    var selectedIndex = Int()
+    
     var time = 0
     var distance = CLLocationDistance()
     var currentLocation = CLLocation()
@@ -67,17 +70,22 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         getDatas(apiUrl: apiUrl)
+        print("selected:\(selectedIndex)")
     }
     
     var currentNodeName:String!
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         currentNodeName = elementName
-        if elementName == "node"{
+        if currentNodeName == "node"{
             id = attributeDict["id"]!
             lat = atof(attributeDict["lat"])
             lon = atof(attributeDict["lon"])
             distance = currentLocation.distance(from: CLLocation(latitude: lat, longitude: lon))
-            
+        }
+        if currentNodeName == "tag"{
+            if attributeDict["k"] == "name"{
+                name = attributeDict["v"]!
+            }
         }
     }
     
@@ -88,6 +96,7 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
             place.lat = lat
             place.lon = lon
             place.distance = distance
+            place.name = name
             places.append(place)
         }
     }
@@ -95,9 +104,8 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let curLocation:CLLocation = locations[0]
         time += 1
-        print(time)
+//        print(time)
         currentLocation = curLocation
-        //        print("\(currentLocation)")
         locationManager.stopUpdatingLocation()
     }
     
@@ -121,11 +129,31 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         places.sort(by: {$0.distance < $1.distance})
-        cell.textLabel?.text = places[indexPath.row].id
+        if places[indexPath.row].name == ""{
+            places[indexPath.row].name = navigationItem.title!
+        }
+        cell.textLabel?.text = places[indexPath.row].name
         cell.detailTextLabel?.text = "\(Int(places[indexPath.row].distance)) M"
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMapView"{
+            let destinationController = segue.destination as! mapViewController
+            destinationController.navigationItem.title = navigationItem.title
+            destinationController.apiUrl = apiUrl
+            destinationController.selectedIndex = selectedIndex
+        }
+        if segue.identifier == "showDetailView"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let destinationController = segue.destination as! mapDetailViewController
+                destinationController.navigationItem.title = places[indexPath.row].name
+                destinationController.lat = places[indexPath.row].lat
+                destinationController.lon = places[indexPath.row].lon
+                destinationController.name = places[indexPath.row].name
+            }
+        }
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
