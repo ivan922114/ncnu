@@ -91,7 +91,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSw-xZ-uye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="18"/>
+            <point key="canvasLocation" x="713" y="30"/>
         </scene>
         <!--Title-->
         <scene sceneID="edp-JO-UlH">
@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-E6-I52">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pu-AC-tk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3193" y="18"/>
+            <point key="canvasLocation" x="1462" y="30"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LpQ-F8-UzH">
@@ -165,14 +165,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ncnu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="T76-it-Wjc">
-                                <rect key="frame" x="16" y="104" width="343" height="80"/>
+                                <rect key="frame" x="16" y="60" width="343" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="O5q-Ye-QRb"/>
                                     <constraint firstAttribute="width" constant="343" id="rUw-zt-3Xb"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qMq-WQ-21N">
-                                <rect key="frame" x="16" y="220" width="343" height="346"/>
+                                <rect key="frame" x="16" y="176" width="343" height="346"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95h-4g-y88">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
@@ -294,7 +294,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5j-V3-Tgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="92C-VC-Dl1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3193" y="-714"/>
+            <point key="canvasLocation" x="2452" y="30"/>
         </scene>
         <!--Courses-->
         <scene sceneID="RkU-Nj-0XD">
@@ -376,7 +376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJ6-og-9Y6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="887.40629685157433"/>
+            <point key="canvasLocation" x="713" y="811"/>
         </scene>
         <!--Title-->
         <scene sceneID="Zaf-9w-mBR">
@@ -387,7 +387,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-tb-Z9B">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -413,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1MP-5I-Icr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="887"/>
+            <point key="canvasLocation" x="1462" y="811"/>
         </scene>
         <!--系所-->
         <scene sceneID="h2E-Fi-KJI">
@@ -461,7 +461,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oe0-5A-G0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986.39999999999998" y="887.40629685157433"/>
+            <point key="canvasLocation" x="-199" y="811"/>
         </scene>
         <!--分類-->
         <scene sceneID="Wvm-DL-dMJ">
@@ -518,7 +518,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJr-mr-Jyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-774"/>
+            <point key="canvasLocation" x="713" y="-738"/>
         </scene>
         <!--Title-->
         <scene sceneID="iBZ-Ta-pVa">
@@ -529,7 +529,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-eB-ROQ" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="349"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="393"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HJ-8A-nW9" customClass="GMSPanoramaView">
@@ -568,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twH-dS-wUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229.5999999999999" y="-774.06296851574223"/>
+            <point key="canvasLocation" x="1462" y="-738"/>
         </scene>
         <!--設施分類-->
         <scene sceneID="cEH-A9-9v3">
@@ -638,7 +638,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4y3-Wc-zDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="712.79999999999995" y="-774.06296851574223"/>
+            <point key="canvasLocation" x="-199" y="-738"/>
         </scene>
         <!--Title-->
         <scene sceneID="pxn-Po-TdZ">
@@ -662,7 +662,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-bU-4ue" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="531"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -688,7 +688,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7L-2l-ZTY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-1475"/>
+            <point key="canvasLocation" x="550" y="-1440"/>
         </scene>
     </scenes>
     <resources>
@@ -697,6 +697,6 @@
         <image name="ncnu_logo" width="1045" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LJs-gB-DwV"/>
+        <segue reference="wjP-Qp-4aS"/>
     </inferredMetricsTieBreakers>
 </document>
