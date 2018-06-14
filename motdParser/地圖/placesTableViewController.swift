@@ -31,7 +31,7 @@ class placesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = false
-    navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.prefersLargeTitles = false
         
     }
 

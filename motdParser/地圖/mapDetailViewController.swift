@@ -27,7 +27,7 @@ class mapDetailViewController: UIViewController, GMSMapViewDelegate,CLLocationMa
         mapView.camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lon, zoom: 16.5)
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
-        mapView.settings.scrollGestures = false
+//        mapView.settings.scrollGestures = false
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
         marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
