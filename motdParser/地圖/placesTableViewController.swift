@@ -15,7 +15,7 @@ class placesTableViewController: UITableViewController {
         case toilets = "http://www.overpass-api.de/api/xapi?node[amenity=toilets][bbox=120.92246,23.9439,120.93623,23.9575]"
         case drinking_water = "http://www.overpass-api.de/api/xapi?node[amenity=drinking_water][bbox=120.92246,23.9439,120.93623,23.9575]"
         case atm = "http://www.overpass-api.de/api/xapi?node[amenity=atm][bbox=120.92246,23.9439,120.93623,23.9575]"
-        case busStop = "http://www.overpass-api.de/api/xapi?node[name=%E6%A0%A1%E8%BB%8A%E7%AB%99%E7%89%8C][bbox=120.92188,23.94296,120.98162,23.97198]"
+        case busStop = "http://www.overpass-api.de/api/xapi?node[network=%E6%9A%A8%E5%A4%A7%E4%BA%A4%E9%80%9A%E8%BB%8A][bbox=120.92188,23.94296,120.98162,23.97198]"
     }
     
     var placetype:[String:String] = ["停車場":placeType.parking.rawValue,"廁所":placeType.toilets.rawValue,"飲水機":placeType.drinking_water.rawValue,"提款機":placeType.atm.rawValue,"校車站":placeType.busStop.rawValue]

@@ -40,7 +40,7 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
             apiUrl = "http://www.overpass-api.de/api/xapi?node[amenity=atm][bbox=120.92246,23.9439,120.93623,23.9575]"
             getDatas(apiUrl: apiUrl)
         case 4:
-            apiUrl = "http://www.overpass-api.de/api/xapi?node[name=%E6%A0%A1%E8%BB%8A%E7%AB%99%E7%89%8C][bbox=120.92188,23.94296,120.98162,23.97198]"
+            apiUrl = "http://www.overpass-api.de/api/xapi?node[network=%E6%9A%A8%E5%A4%A7%E4%BA%A4%E9%80%9A%E8%BB%8A][bbox=120.92188,23.94296,120.98162,23.97198]"
             getDatas(apiUrl: apiUrl)
         default:
             break
@@ -84,8 +84,8 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
                 let marker = GMSMarker()
                 marker.map = self.mapView
                 marker.position = CLLocationCoordinate2D(latitude: place.lat, longitude: place.lon)
-                marker.snippet = self.SegmentedControl.titleForSegment(at: self.selectedIndex)
-            }
+                marker.snippet = place.name
+            }            
         })
         task.resume()
     }
@@ -103,8 +103,6 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
         
         // mapview
         getDatas(apiUrl: apiUrl)
-        mapView.layer.borderWidth = 2
-        mapView.layer.borderColor = UIColor.black.cgColor
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
@@ -130,6 +128,8 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
         case "tag":
             if attributeDict["k"] == "name"{
                 name = attributeDict["v"]!
+            }else if attributeDict["k"] == "amenity"{
+                name = "飲水機"
             }
         default:
             break

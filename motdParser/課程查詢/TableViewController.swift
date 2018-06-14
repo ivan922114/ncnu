@@ -111,7 +111,6 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         courses.sort(by: {$0.time < $1.time})
         let course = courses[indexPath.row]
         cell.teacher.text = course.teacher
-//        cell.teacher.layer.borderWidth = 1
         cell.time.text = course.time
         cell.course.text = course.course_cname
         return cell

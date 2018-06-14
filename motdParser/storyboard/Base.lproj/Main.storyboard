@@ -671,9 +671,7 @@
                         <viewLayoutGuide key="safeArea" id="IIx-Dq-R5K"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="rlx-7D-7ID">
-                        <barButtonItem key="backBarButtonItem" title=" " id="9Ed-YC-FtI"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="7tE-WR-GpA"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="SegmentedControl" destination="wXx-v1-KJ2" id="kfm-wm-xYU"/>

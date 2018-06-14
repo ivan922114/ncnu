@@ -78,7 +78,7 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
             if attributeDict["k"] == "name" && selectedIndex != 4{
                 name = attributeDict["v"]!
             }else if selectedIndex == 4{
-                if attributeDict["k"] == "description"{
+                if attributeDict["k"] == "name"{
                     name = attributeDict["v"]!
                 }
             }else if selectedIndex == 3{
@@ -141,7 +141,7 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         switch segue.identifier {
         case "showMapView":
             let destinationController = segue.destination as! mapViewController
-            destinationController.navigationItem.title = navigationItem.title
+            destinationController.navigationItem.title = "設施"
             destinationController.apiUrl = apiUrl
             destinationController.selectedIndex = selectedIndex
         case "showDetailView":
