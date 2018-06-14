@@ -34,18 +34,11 @@
 		AF5FA0CD20CFABCC00CD19A0 /* mapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */; };
 		AF871E3D20D0315A00403C37 /* placesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF871E3C20D0315A00403C37 /* placesTableViewController.swift */; };
 		AF871E4E20D0328E00403C37 /* placesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF871E4D20D0328E00403C37 /* placesTableViewCell.swift */; };
+		AFA1E40E20D25B4D004EC5D2 /* wthc06.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA1E40D20D25B4B004EC5D2 /* wthc06.ttf */; };
+		AFA1E41020D25C89004EC5D2 /* wt006.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA1E40F20D25C87004EC5D2 /* wt006.ttf */; };
 		AFACABF220CFB35C00E905A6 /* mapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */; };
 		AFEBDA7420C2CB0500AE8B79 /* setofont-ex.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7220C2CB0200AE8B79 /* setofont-ex.ttf */; };
 		AFEBDA7520C2CB0500AE8B79 /* setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7320C2CB0400AE8B79 /* setofont.ttf */; };
-		AFEBDA7F20C2CD4C00AE8B79 /* NotoSansCJKtc-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7620C2CD4700AE8B79 /* NotoSansCJKtc-Medium.otf */; };
-		AFEBDA8020C2CD4C00AE8B79 /* NotoSansCJKtc-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7720C2CD4800AE8B79 /* NotoSansCJKtc-Bold.otf */; };
-		AFEBDA8120C2CD4C00AE8B79 /* NotoSansCJKtc-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7820C2CD4800AE8B79 /* NotoSansCJKtc-Thin.otf */; };
-		AFEBDA8220C2CD4C00AE8B79 /* NotoSansMonoCJKtc-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7920C2CD4900AE8B79 /* NotoSansMonoCJKtc-Bold.otf */; };
-		AFEBDA8320C2CD4C00AE8B79 /* NotoSansCJKtc-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7A20C2CD4900AE8B79 /* NotoSansCJKtc-DemiLight.otf */; };
-		AFEBDA8420C2CD4C00AE8B79 /* NotoSansMonoCJKtc-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7B20C2CD4A00AE8B79 /* NotoSansMonoCJKtc-Regular.otf */; };
-		AFEBDA8520C2CD4C00AE8B79 /* NotoSansCJKtc-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7C20C2CD4A00AE8B79 /* NotoSansCJKtc-Black.otf */; };
-		AFEBDA8620C2CD4C00AE8B79 /* NotoSansCJKtc-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7D20C2CD4B00AE8B79 /* NotoSansCJKtc-Light.otf */; };
-		AFEBDA8720C2CD4C00AE8B79 /* NotoSansCJKtc-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFEBDA7E20C2CD4B00AE8B79 /* NotoSansCJKtc-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,18 +72,11 @@
 		AF5FA0CC20CFABCC00CD19A0 /* mapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapTableViewController.swift; sourceTree = "<group>"; };
 		AF871E3C20D0315A00403C37 /* placesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placesTableViewController.swift; sourceTree = "<group>"; };
 		AF871E4D20D0328E00403C37 /* placesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placesTableViewCell.swift; sourceTree = "<group>"; };
+		AFA1E40D20D25B4B004EC5D2 /* wthc06.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wthc06.ttf; sourceTree = "<group>"; };
+		AFA1E40F20D25C87004EC5D2 /* wt006.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wt006.ttf; sourceTree = "<group>"; };
 		AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapTableViewCell.swift; sourceTree = "<group>"; };
 		AFEBDA7220C2CB0200AE8B79 /* setofont-ex.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "setofont-ex.ttf"; sourceTree = "<group>"; };
 		AFEBDA7320C2CB0400AE8B79 /* setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = setofont.ttf; sourceTree = "<group>"; };
-		AFEBDA7620C2CD4700AE8B79 /* NotoSansCJKtc-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-Medium.otf"; sourceTree = "<group>"; };
-		AFEBDA7720C2CD4800AE8B79 /* NotoSansCJKtc-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-Bold.otf"; sourceTree = "<group>"; };
-		AFEBDA7820C2CD4800AE8B79 /* NotoSansCJKtc-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-Thin.otf"; sourceTree = "<group>"; };
-		AFEBDA7920C2CD4900AE8B79 /* NotoSansMonoCJKtc-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKtc-Bold.otf"; sourceTree = "<group>"; };
-		AFEBDA7A20C2CD4900AE8B79 /* NotoSansCJKtc-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-DemiLight.otf"; sourceTree = "<group>"; };
-		AFEBDA7B20C2CD4A00AE8B79 /* NotoSansMonoCJKtc-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKtc-Regular.otf"; sourceTree = "<group>"; };
-		AFEBDA7C20C2CD4A00AE8B79 /* NotoSansCJKtc-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-Black.otf"; sourceTree = "<group>"; };
-		AFEBDA7D20C2CD4B00AE8B79 /* NotoSansCJKtc-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-Light.otf"; sourceTree = "<group>"; };
-		AFEBDA7E20C2CD4B00AE8B79 /* NotoSansCJKtc-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKtc-Regular.otf"; sourceTree = "<group>"; };
 		BB93925E4075ADDF92B39AB5 /* Pods_motdParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_motdParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -205,15 +191,8 @@
 			children = (
 				AFEBDA7220C2CB0200AE8B79 /* setofont-ex.ttf */,
 				AFEBDA7320C2CB0400AE8B79 /* setofont.ttf */,
-				AFEBDA7C20C2CD4A00AE8B79 /* NotoSansCJKtc-Black.otf */,
-				AFEBDA7720C2CD4800AE8B79 /* NotoSansCJKtc-Bold.otf */,
-				AFEBDA7A20C2CD4900AE8B79 /* NotoSansCJKtc-DemiLight.otf */,
-				AFEBDA7D20C2CD4B00AE8B79 /* NotoSansCJKtc-Light.otf */,
-				AFEBDA7620C2CD4700AE8B79 /* NotoSansCJKtc-Medium.otf */,
-				AFEBDA7E20C2CD4B00AE8B79 /* NotoSansCJKtc-Regular.otf */,
-				AFEBDA7820C2CD4800AE8B79 /* NotoSansCJKtc-Thin.otf */,
-				AFEBDA7920C2CD4900AE8B79 /* NotoSansMonoCJKtc-Bold.otf */,
-				AFEBDA7B20C2CD4A00AE8B79 /* NotoSansMonoCJKtc-Regular.otf */,
+				AFA1E40D20D25B4B004EC5D2 /* wthc06.ttf */,
+				AFA1E40F20D25C87004EC5D2 /* wt006.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -288,20 +267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				165D9C46209960010036E8B3 /* LaunchScreen.storyboard in Resources */,
-				AFEBDA8120C2CD4C00AE8B79 /* NotoSansCJKtc-Thin.otf in Resources */,
-				AFEBDA8020C2CD4C00AE8B79 /* NotoSansCJKtc-Bold.otf in Resources */,
-				AFEBDA8620C2CD4C00AE8B79 /* NotoSansCJKtc-Light.otf in Resources */,
 				AFEBDA7520C2CB0500AE8B79 /* setofont.ttf in Resources */,
-				AFEBDA8720C2CD4C00AE8B79 /* NotoSansCJKtc-Regular.otf in Resources */,
+				AFA1E40E20D25B4D004EC5D2 /* wthc06.ttf in Resources */,
 				16107ACB20CFC02400E20698 /* xapi in Resources */,
+				AFA1E41020D25C89004EC5D2 /* wt006.ttf in Resources */,
 				AF189ED220C66F0A0028D71E /* data.xml in Resources */,
 				165D9C43209960010036E8B3 /* Assets.xcassets in Resources */,
-				AFEBDA8220C2CD4C00AE8B79 /* NotoSansMonoCJKtc-Bold.otf in Resources */,
-				AFEBDA8320C2CD4C00AE8B79 /* NotoSansCJKtc-DemiLight.otf in Resources */,
-				AFEBDA7F20C2CD4C00AE8B79 /* NotoSansCJKtc-Medium.otf in Resources */,
-				AFEBDA8520C2CD4C00AE8B79 /* NotoSansCJKtc-Black.otf in Resources */,
 				165D9C41209960000036E8B3 /* Main.storyboard in Resources */,
-				AFEBDA8420C2CD4C00AE8B79 /* NotoSansMonoCJKtc-Regular.otf in Resources */,
 				AFEBDA7420C2CB0500AE8B79 /* setofont-ex.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,7 +495,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJM478WRFL;
 				INFOPLIST_FILE = motdParser/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vipLab.ncnu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -539,7 +514,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJM478WRFL;
 				INFOPLIST_FILE = motdParser/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vipLab.ncnu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

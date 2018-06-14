@@ -11,11 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NotoSansMonoCJKtc-Regular.otf">
-            <string>NotoSansMonoCJKtc-Regular</string>
-        </array>
         <array key="setofont.ttf">
             <string>SetoFont</string>
+        </array>
+        <array key="wt006.ttf">
+            <string>HanWangYenLight</string>
         </array>
     </customFonts>
     <scenes>
@@ -37,7 +37,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ3-MV-9Ye">
                                             <rect key="frame" x="10" y="20" width="355" height="39.5"/>
-                                            <fontDescription key="fontDescription" name="NotoSansMonoCJKtc-Regular" family="Noto Sans Mono CJK TC" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -49,7 +49,7 @@
                                         <constraint firstAttribute="bottom" secondItem="MZ3-MV-9Ye" secondAttribute="bottom" constant="20" id="nQU-q9-3ZU"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="title" destination="MZ3-MV-9Ye" id="b0C-7j-jdQ"/>
                                     <segue destination="6IU-pJ-y7O" kind="show" identifier="showMotdDetails" id="KGf-OC-6GV"/>
@@ -139,9 +139,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zRy-KI-VzQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="17"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -181,7 +182,7 @@
                                             <constraint firstAttribute="height" constant="82" id="ogA-eY-tmd"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="rZy-OO-GHG"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="50"/>
+                                        <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="50"/>
                                         <state key="normal" title="公告">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -196,7 +197,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="lEO-0S-Vj0"/>
                                             <constraint firstAttribute="height" constant="82" id="srH-I4-jev"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="50"/>
+                                        <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="50"/>
                                         <state key="normal" title="設施">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -211,7 +212,7 @@
                                             <constraint firstAttribute="height" constant="82" id="9j9-od-jjB"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="hkV-va-gby"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="50"/>
+                                        <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="50"/>
                                         <state key="normal" title="課程查詢">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -320,7 +321,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Ld9-eO-U7v"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -332,7 +333,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="263" id="yYX-jn-5v6"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="19"/>
+                                                            <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -341,7 +342,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="263" id="gi7-d8-a8V"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -357,6 +358,7 @@
                                         <constraint firstItem="jQy-Xl-20z" firstAttribute="top" secondItem="NN8-cg-cAq" secondAttribute="topMargin" id="g83-wg-xbr"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="course" destination="gdF-O8-fdq" id="u6W-T4-Q3g"/>
                                     <outlet property="teacher" destination="agq-dV-SrW" id="S2M-II-kUj"/>
@@ -424,22 +426,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="GGd-yg-1um" rowHeight="85" style="IBUITableViewCellStyleDefault" id="EoC-xk-F0C">
-                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="GGd-yg-1um" rowHeight="100" style="IBUITableViewCellStyleDefault" id="EoC-xk-F0C">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EoC-xk-F0C" id="QPu-1f-1F4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GGd-yg-1um">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="84.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="oSX-fy-m0g" kind="show" identifier="showCourses" id="DQX-Pj-hfe"/>
                                 </connections>
@@ -472,29 +475,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="O4q-9W-GkZ" detailTextLabel="MPG-c8-ynf" style="IBUITableViewCellStyleValue1" id="MdT-Sw-pSK">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="O4q-9W-GkZ" detailTextLabel="MPG-c8-ynf" rowHeight="100" style="IBUITableViewCellStyleValue1" id="MdT-Sw-pSK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MdT-Sw-pSK" id="htd-kJ-KxA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O4q-9W-GkZ">
-                                            <rect key="frame" x="16" y="14" width="42.5" height="17"/>
+                                            <rect key="frame" x="16" y="42" width="31" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MPG-c8-ynf">
-                                            <rect key="frame" x="308" y="14" width="51" height="17"/>
+                                            <rect key="frame" x="318.5" y="42" width="40.5" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="8MN-7H-5aP" kind="show" identifier="showDetailView" id="vtV-ut-Ajb"/>
                                 </connections>
@@ -518,7 +522,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJr-mr-Jyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="-738"/>
+            <point key="canvasLocation" x="712.79999999999995" y="-738.08095952023996"/>
         </scene>
         <!--Title-->
         <scene sceneID="iBZ-Ta-pVa">
@@ -541,7 +545,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="S6w-eB-ROQ" firstAttribute="leading" secondItem="KaU-ev-PyA" secondAttribute="leading" id="3dW-rB-IPL"/>
                             <constraint firstItem="ydM-z9-6G1" firstAttribute="top" secondItem="1HJ-8A-nW9" secondAttribute="bottom" id="6dP-XH-6wD"/>
@@ -601,7 +605,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42.5" id="45p-zu-xah"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -615,6 +619,7 @@
                                         <constraint firstItem="U61-2a-HCo" firstAttribute="leading" secondItem="kKW-L9-V5i" secondAttribute="leadingMargin" id="wtQ-ic-bqp"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="placeImageView" destination="tLs-Qa-UuE" id="EYP-sY-Rzq"/>
                                     <outlet property="placeLabel" destination="MDv-YW-DtI" id="SWR-VX-6Im"/>
@@ -688,7 +693,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7L-2l-ZTY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550" y="-1440"/>
+            <point key="canvasLocation" x="713" y="-1526"/>
         </scene>
     </scenes>
     <resources>
@@ -697,6 +702,6 @@
         <image name="ncnu_logo" width="1045" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wjP-Qp-4aS"/>
+        <segue reference="9pM-Jb-HWL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -84,6 +84,10 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = false
         
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "023"))
+        self.tableView.backgroundView?.contentMode = .scaleAspectFill
+        self.tableView.backgroundView?.alpha = 0.15
+        
 //        apiUrl += departmentID["外文系"]!
         getCourses(apiUrl: apiUrl)
 

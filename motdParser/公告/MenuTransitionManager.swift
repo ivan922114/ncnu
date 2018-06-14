@@ -41,7 +41,7 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         
         // Set up the transform we'll use in the animation
         let container = transitionContext.containerView
-        let moveDown = CGAffineTransform(translationX: container.frame.width - 150, y: 0)
+        let moveDown = CGAffineTransform(translationX: container.frame.width - 200, y: 0)
         let moveUp = CGAffineTransform(translationX: -50, y: 0)
         
         // Add both views to the container view

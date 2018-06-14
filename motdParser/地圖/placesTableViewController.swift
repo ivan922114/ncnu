@@ -33,6 +33,10 @@ class placesTableViewController: UITableViewController {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = false
         
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "013"))
+        self.tableView.backgroundView?.contentMode = .scaleAspectFill
+        self.tableView.backgroundView?.alpha = 0.15
+        
     }
 
     override func didReceiveMemoryWarning() {
