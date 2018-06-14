@@ -26,6 +26,7 @@ class motdMenuTableViewController: UITableViewController {
             }
             i += 1
         }
+        menuItems.sort()
         print(menuItems)
     }
 
@@ -50,7 +51,7 @@ class motdMenuTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.titleLabel.text = menuItems[indexPath.row]
-        cell.titleLabel.textColor = (menuItems[indexPath.row] == currentItem) ? UIColor.darkGray : UIColor.darkText
+        cell.titleLabel.textColor = (menuItems[indexPath.row] == currentItem) ? UIColor.white : UIColor.lightGray
 
         return cell
     }

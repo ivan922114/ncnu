@@ -53,9 +53,9 @@ class placesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-        cell.textLabel?.text = place[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! placesTableViewCell
+        cell.placeImageView.image = UIImage(named: place[indexPath.row])
+        cell.placeLabel?.text = place[indexPath.row]
         
         return cell
     }

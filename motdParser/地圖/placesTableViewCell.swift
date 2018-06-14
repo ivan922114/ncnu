@@ -9,7 +9,9 @@
 import UIKit
 
 class placesTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var placeImageView: UIImageView!
+    @IBOutlet weak var placeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
