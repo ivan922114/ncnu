@@ -27,6 +27,9 @@
 		AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECE20C66F0A0028D71E /* courseDetailsViewController.swift */; };
 		AF189ED520C66F0A0028D71E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECF20C66F0A0028D71E /* TableViewController.swift */; };
 		AF189ED620C66F0A0028D71E /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ED020C66F0A0028D71E /* Courses.swift */; };
+		AF25D45A20D36FB20075CEBF /* moreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D45920D36FB20075CEBF /* moreTableViewController.swift */; };
+		AF25D45F20D370160075CEBF /* moreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D45E20D370160075CEBF /* moreTableViewCell.swift */; };
+		AF25D46120D3728A0075CEBF /* moreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D46020D3728A0075CEBF /* moreViewController.swift */; };
 		AF525AA220B512CA00A933C7 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF525AA120B512CA00A933C7 /* HomeScreenViewController.swift */; };
 		AF55038620ABD0F10036DB44 /* motdMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55038520ABD0F10036DB44 /* motdMenuTableViewController.swift */; };
 		AF55038820ABD1DF0036DB44 /* motdMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55038720ABD1DF0036DB44 /* motdMenuTableViewCell.swift */; };
@@ -65,6 +68,9 @@
 		AF189ECE20C66F0A0028D71E /* courseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseDetailsViewController.swift; sourceTree = "<group>"; };
 		AF189ECF20C66F0A0028D71E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AF189ED020C66F0A0028D71E /* Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		AF25D45920D36FB20075CEBF /* moreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreTableViewController.swift; sourceTree = "<group>"; };
+		AF25D45E20D370160075CEBF /* moreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreTableViewCell.swift; sourceTree = "<group>"; };
+		AF25D46020D3728A0075CEBF /* moreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moreViewController.swift; path = "motdParser/生活相關/moreViewController.swift"; sourceTree = SOURCE_ROOT; };
 		AF525AA120B512CA00A933C7 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		AF55038520ABD0F10036DB44 /* motdMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdMenuTableViewController.swift; sourceTree = "<group>"; };
 		AF55038720ABD1DF0036DB44 /* motdMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				AF189EC820C66CBE0028D71E /* 公告 */,
 				16BC1E4220CADE8C00C6C666 /* 地圖 */,
 				AF189ECA20C66EC60028D71E /* 課程查詢 */,
+				AF25D45B20D36FB90075CEBF /* 生活相關 */,
 				AF189EC920C66CF80028D71E /* storyboard */,
 				165D9C3B209960000036E8B3 /* AppDelegate.swift */,
 				AF525AA120B512CA00A933C7 /* HomeScreenViewController.swift */,
@@ -184,6 +191,16 @@
 				AF189ECF20C66F0A0028D71E /* TableViewController.swift */,
 			);
 			path = "課程查詢";
+			sourceTree = "<group>";
+		};
+		AF25D45B20D36FB90075CEBF /* 生活相關 */ = {
+			isa = PBXGroup;
+			children = (
+				AF25D45920D36FB20075CEBF /* moreTableViewController.swift */,
+				AF25D45E20D370160075CEBF /* moreTableViewCell.swift */,
+				AF25D46020D3728A0075CEBF /* moreViewController.swift */,
+			);
+			path = "生活相關";
 			sourceTree = "<group>";
 		};
 		AFEBDA7120C2CAD600AE8B79 /* Font */ = {
@@ -329,16 +346,19 @@
 				167380A120D1208C00E982E5 /* PlaceViewController.swift in Sources */,
 				16BC1E4420CADEA400C6C666 /* mapViewController.swift in Sources */,
 				AF871E3D20D0315A00403C37 /* placesTableViewController.swift in Sources */,
+				AF25D46120D3728A0075CEBF /* moreViewController.swift in Sources */,
 				165D9C502099679E0036E8B3 /* motd.swift in Sources */,
 				AF189ED120C66F0A0028D71E /* departmentTableViewController.swift in Sources */,
 				AF189ED620C66F0A0028D71E /* Courses.swift in Sources */,
 				AF189ED520C66F0A0028D71E /* TableViewController.swift in Sources */,
 				165D9C5220996A670036E8B3 /* motdTableViewCell.swift in Sources */,
+				AF25D45F20D370160075CEBF /* moreTableViewCell.swift in Sources */,
 				AF55038820ABD1DF0036DB44 /* motdMenuTableViewCell.swift in Sources */,
 				AF189ED320C66F0A0028D71E /* coursesTableViewCell.swift in Sources */,
 				AF55038620ABD0F10036DB44 /* motdMenuTableViewController.swift in Sources */,
 				AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */,
 				AF871E4E20D0328E00403C37 /* placesTableViewCell.swift in Sources */,
+				AF25D45A20D36FB20075CEBF /* moreTableViewController.swift in Sources */,
 				AF55038A20ABD4340036DB44 /* MenuTransitionManager.swift in Sources */,
 				AF525AA220B512CA00A933C7 /* HomeScreenViewController.swift in Sources */,
 				AFACABF220CFB35C00E905A6 /* mapTableViewCell.swift in Sources */,
