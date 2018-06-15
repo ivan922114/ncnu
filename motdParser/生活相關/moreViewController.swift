@@ -8,7 +8,27 @@
 
 import UIKit
 import WebKit
-class moreViewController: UIViewController, WKNavigationDelegate {
+class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        cell.textLabel?.text = "123"
+        
+        return cell
+    }
+    
     
     @IBOutlet var webView: UIWebView!
     var service = String()
@@ -22,8 +42,9 @@ class moreViewController: UIViewController, WKNavigationDelegate {
             Url = "https://www.doc.ncnu.edu.tw/affairs/index.php/2012-07-11-07-39-40/category/11-2012-07-12-01-50-48?download=323:106-2-107-2-24-107-7-1"
             print(service)
         case "包裹查詢":
-            Url = "http://ccweb.ncnu.edu.tw/dormMail/"
-            print(service)
+            //Url = "http://ccweb.ncnu.edu.tw/dormMail/"
+            //print(service)
+            break
         case "汽機車登記":
             Url = "https://ccweb.ncnu.edu.tw/student/"
             print(service)
@@ -33,8 +54,10 @@ class moreViewController: UIViewController, WKNavigationDelegate {
         default:
             break
         }
+        
         if let url = URL(string: Url) {
             let request = URLRequest(url: url)
+            self.view.addSubview(webView)
             webView.loadRequest(request)
         }
     }
