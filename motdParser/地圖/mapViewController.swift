@@ -85,7 +85,7 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
                 marker.map = self.mapView
                 marker.position = CLLocationCoordinate2D(latitude: place.lat, longitude: place.lon)
                 marker.snippet = place.name
-            }            
+            }
         })
         task.resume()
     }
