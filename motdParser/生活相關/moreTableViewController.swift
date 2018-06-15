@@ -9,7 +9,7 @@
 import UIKit
 
 class moreTableViewController: UITableViewController {
-
+    var services = [["校車時間","包裹查詢","汽機車登記","緊急聯絡資訊"],["校車站","包裹","汽機車","緊急聯絡資訊"]]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +18,7 @@ class moreTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        navigationController?.navigationBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,24 +30,33 @@ class moreTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return services[0].count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! moreTableViewCell
+
+        cell.tilteText.text = services[0][indexPath.row]
+        cell.tilteImage.image = UIImage(named: services[1][indexPath.row])
 
         return cell
     }
-    */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMoreService"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let destinationController = segue.destination as! moreViewController
+                destinationController.navigationItem.title = services[0][indexPath.row]
+                destinationController.service = services[0][indexPath.row]
+            }
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

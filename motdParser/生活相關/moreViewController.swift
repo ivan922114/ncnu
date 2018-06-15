@@ -7,13 +7,36 @@
 //
 
 import UIKit
-
-class moreViewController: UIViewController {
-
+import WebKit
+class moreViewController: UIViewController, WKNavigationDelegate {
+    
+    @IBOutlet var webView: UIWebView!
+    var service = String()
+    var Url = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        switch service {
+        case "校車時間":
+            Url = "https://www.doc.ncnu.edu.tw/affairs/index.php/2012-07-11-07-39-40/category/11-2012-07-12-01-50-48?download=323:106-2-107-2-24-107-7-1"
+            print(service)
+        case "包裹查詢":
+            Url = "http://ccweb.ncnu.edu.tw/dormMail/"
+            print(service)
+        case "汽機車登記":
+            Url = "https://ccweb.ncnu.edu.tw/student/"
+            print(service)
+        case "緊急聯絡資訊":
+            Url = "https://m.ncnu.edu.tw/MobileWeb/Home/phone"
+            print(service)
+        default:
+            break
+        }
+        if let url = URL(string: Url) {
+            let request = URLRequest(url: url)
+            webView.loadRequest(request)
+        }
     }
 
     override func didReceiveMemoryWarning() {

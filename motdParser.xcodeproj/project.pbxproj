@@ -196,9 +196,9 @@
 		AF25D45B20D36FB90075CEBF /* 生活相關 */ = {
 			isa = PBXGroup;
 			children = (
+				AF25D46020D3728A0075CEBF /* moreViewController.swift */,
 				AF25D45920D36FB20075CEBF /* moreTableViewController.swift */,
 				AF25D45E20D370160075CEBF /* moreTableViewCell.swift */,
-				AF25D46020D3728A0075CEBF /* moreViewController.swift */,
 			);
 			path = "生活相關";
 			sourceTree = "<group>";

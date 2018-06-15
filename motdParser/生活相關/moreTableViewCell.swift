@@ -13,6 +13,8 @@ class moreTableViewCell: UITableViewCell {
     @IBOutlet var tilteImage: UIImageView!
     @IBOutlet var tilteText: UILabel!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

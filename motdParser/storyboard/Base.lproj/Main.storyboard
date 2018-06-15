@@ -431,10 +431,10 @@
             </objects>
             <point key="canvasLocation" x="1679" y="1093"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="EVY-CI-GRo">
             <objects>
-                <viewController id="Jsi-q8-Yd8" sceneMemberID="viewController">
+                <viewController id="Jsi-q8-Yd8" customClass="moreViewController" customModule="motdParser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m99-vW-IL7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,6 +457,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EPj-ne-RxH"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="wRP-30-gKE" id="d0v-1c-FxA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6N6-Ht-AMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -510,7 +513,7 @@
                                 <connections>
                                     <outlet property="tilteImage" destination="a2F-3o-J8y" id="T6m-4O-rRj"/>
                                     <outlet property="tilteText" destination="nYD-5E-XMO" id="mrE-6f-fdr"/>
-                                    <segue destination="Jsi-q8-Yd8" kind="show" id="jKx-Nd-OkU"/>
+                                    <segue destination="Jsi-q8-Yd8" kind="show" identifier="showMoreService" id="jKx-Nd-OkU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
