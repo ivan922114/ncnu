@@ -9,7 +9,7 @@
 import UIKit
 
 class moreTableViewCell: UITableViewCell {
-//
+
     @IBOutlet var tilteImage: UIImageView!
     @IBOutlet var tilteText: UILabel!
     

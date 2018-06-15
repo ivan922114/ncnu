@@ -8,60 +8,128 @@
 
 import UIKit
 import WebKit
-class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDelegate, UITableViewDataSource {
+class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDelegate, UITableViewDataSource, URLSessionDataDelegate{
+    
+    let fullScreenSize = UIScreen.main.bounds.size
+    var packages: [Package] = []
+    var service = String()
+    var Url = String()
+    
+    @IBOutlet var tableview: UITableView!
+    
+    func getData(packageURL: String){
+        guard let packageUrl = URL(string: packageURL) else {
+            return
+        }
+        
+        let request = URLRequest(url: packageUrl)
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            // Parse JSON data
+            if let data = data {
+                self.packages = self.parseJsonData(data: data)
+                // Reload table view
+                OperationQueue.main.addOperation({
+                    self.tableview.reloadData()
+                })
+            }
+        })
+        task.resume()
+    }
+    
+    func parseJsonData(data: Data) -> [Package] {
+        
+        var packages = [Package]()
+        
+        do {
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:AnyObject]
+            
+            // Parse JSON data
+            let jsonPackages = jsonResult?["items"] as? [AnyObject]
+            for jsonPackage in jsonPackages! {
+                let package = Package()
+                package.company = jsonPackage["company"] as! String
+                package.date = jsonPackage["date"] as! String
+                package.department = jsonPackage["department"] as! String
+                package.logID = jsonPackage["logID"] as! String
+                package.name = jsonPackage["name"] as! String
+                package.recDay = jsonPackage["recDay"] as! String
+                package.regNumber = jsonPackage["regNumber"] as! String
+                package.remark = jsonPackage["remark"] as! String
+                package.type = jsonPackage["type"] as! String
+                packages.append(package)
+            }
+        } catch {
+            print(error)
+        }
+        return packages
+    }
+    
+    func getWebView(url: String){
+        let webView = UIWebView(frame: CGRect(x: 0, y: 0,width:fullScreenSize.width,height: fullScreenSize.height))
+        webView.scalesPageToFit = true
+        if let url = URL(string: Url) {
+            let request = URLRequest(url: url)
+            view.addSubview(webView)
+            webView.loadRequest(request)
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return packages.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel?.text = "123"
-        
+        cell.textLabel?.text = packages[indexPath.row].department
+        cell.detailTextLabel?.text = packages[indexPath.row].name
         return cell
     }
     
-    
-    @IBOutlet var webView: UIWebView!
-    var service = String()
-    var Url = String()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         switch service {
         case "校車時間":
             Url = "https://www.doc.ncnu.edu.tw/affairs/index.php/2012-07-11-07-39-40/category/11-2012-07-12-01-50-48?download=323:106-2-107-2-24-107-7-1"
-            print(service)
+            getWebView(url: Url)
+//            print(service)
         case "包裹查詢":
-            //Url = "http://ccweb.ncnu.edu.tw/dormMail/"
-            //print(service)
+            Url = "http://cbooking.ddns.net/87zone/package.php"
+            getData(packageURL: Url)
+//            print(service)
             break
         case "汽機車登記":
             Url = "https://ccweb.ncnu.edu.tw/student/"
-            print(service)
+            getWebView(url: Url)
+//            print(service)
         case "緊急聯絡資訊":
             Url = "https://m.ncnu.edu.tw/MobileWeb/Home/phone"
-            print(service)
+            getWebView(url: Url)
+//            print(service)
         default:
             break
         }
-        
-        if let url = URL(string: Url) {
-            let request = URLRequest(url: url)
-            self.view.addSubview(webView)
-            webView.loadRequest(request)
-        }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPackageDetails"{
+            if let indexPath = tableview.indexPathForSelectedRow{
+                let destinationController = segue.destination as! packageDetailsTableViewController
+                destinationController.package = packages[indexPath.row]
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
