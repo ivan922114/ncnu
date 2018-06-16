@@ -13,8 +13,6 @@ class departmentTableViewController: UITableViewController {
     var departmentID = ["中文系":"M100","外文系":"M200","社工系":"M400","公行系":"M500","歷史系":"M600","東南亞系":"M800","華文碩士學程":"MD00","非營利組織經營管理碩士學位學程":"MF00","原鄉發展學士專班":"MG00","國企系":"N100","經濟系":"N200","資管系":"N300","財金系":"N400","觀光餐旅系":"N500","管理學學位學程":"N600","新興產業策略與發展學位學程":"N800","土木系":"O100","資工系":"O200","電機系":"O300","應化系":"O400","應光系":"O800","國比系":"M300","教政系":"M700","諮人系":"MA00","課科所":"MC00","終身學習與人資專班":"ME00","其他":"U000"]
     var department: Array<String> = []
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,13 +23,6 @@ class departmentTableViewController: UITableViewController {
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "011"))
         self.tableView.backgroundView?.contentMode = .scaleAspectFill
         self.tableView.backgroundView?.alpha = 0.15
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
         
         let sortedDepartment = departmentID.sorted { first, second in
             return first.1 < second.1
@@ -72,8 +63,7 @@ class departmentTableViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationController = segue.destination as! TableViewController
                 destinationController.navigationItem.title = department[indexPath.row]
-                destinationController.apiUrl += departmentID[department[indexPath.row]]!
-                print(departmentID[department[indexPath.row]]!)
+                destinationController.dpID = departmentID[department[indexPath.row]]!
                 
             }
         }

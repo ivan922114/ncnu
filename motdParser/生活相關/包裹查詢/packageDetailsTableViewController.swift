@@ -16,16 +16,23 @@ class packageDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "包裹"))
-        self.tableView.backgroundView?.contentMode = .center
-        self.tableView.backgroundView?.alpha = 0.1
-        
+        setBG(img: "包裹", width: 256, height: 256, alpha: 0.03)
         for (key,value) in package.dict {
             arrKey.append(key)
             arrValue.append(value)
         }
     }
 
+    func setBG(img: String, width: CGFloat, height: CGFloat, alpha: CGFloat){
+        let iv = UIImageView(image: UIImage(named: img))
+        iv.contentMode = .scaleAspectFit
+        iv.layer.frame = CGRect(x: tableView.bounds.midX-width/2, y: tableView.bounds.midY-height/2, width: width, height: height)
+        let tableViewBackgroundView = UIView()
+        tableViewBackgroundView.addSubview(iv)
+        tableView.backgroundView = tableViewBackgroundView
+        tableView.backgroundView?.alpha = alpha
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

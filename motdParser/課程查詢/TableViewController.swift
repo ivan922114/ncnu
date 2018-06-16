@@ -30,25 +30,9 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     var division: String = String()
     var edivision: String? = String()
     var course_credit: String = String()
-    var apiUrl = "https://api.ncnu.edu.tw/API/get.aspx?xml=course_ncnu&year=106&semester=2&unitId="
-    
-//    func getCourses(apiUrl: String){
-//        do{
-//            let url = URL(string: apiUrl)
-//            let data = try Data(contentsOf: url!)
-//            let parser = XMLParser(data: data)
-//            parser.delegate = self
-//            parser.parse()
-//        }catch{
-//            print("error")
-//        }
-////        if let path = Bundle.main.url(forResource: "data", withExtension: "xml") {
-////            if let parser = XMLParser(contentsOf: path) {
-////                parser.delegate = self
-////                parser.parse()
-////            }
-////        }
-//    }
+    var years = Int()
+    var semesters = Int()
+    var dpID = String()
     
     func getCourses(apiUrl: String) {
         guard let apiUrl = URL(string: apiUrl) else {
@@ -88,7 +72,16 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         self.tableView.backgroundView?.contentMode = .scaleAspectFill
         self.tableView.backgroundView?.alpha = 0.15
         
-//        apiUrl += departmentID["外文系"]!
+        //年份和學期判斷
+        let month = Calendar.current.component(.month, from: Date())
+        years = Calendar.current.component(.year, from: Date())-1912
+        if(month > 6){
+            years += 1
+            semesters = 1
+        }else if(month > 1) && (month < 6){
+            semesters = 2
+        }
+        let apiUrl = "https://api.ncnu.edu.tw/API/get.aspx?xml=course_ncnu&year=\(years)&semester=2&unitId=\(dpID)"
         getCourses(apiUrl: apiUrl)
 
     }
@@ -120,7 +113,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         return cell
     }
     
-    // 1
+    // 打開xml標籤
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         eName = elementName
         if eName == "item" {
@@ -144,7 +137,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         }
     }
     
-    // 2
+    // 結束xml標籤
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
             let course = Course()
@@ -168,7 +161,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         }
     }
     
-    // 3
+    // 找到xml標籤
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         let data = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         

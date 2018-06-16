@@ -21,14 +21,12 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
         guard let packageUrl = URL(string: packageURL) else {
             return
         }
-        
         let request = URLRequest(url: packageUrl)
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
             if let error = error {
                 print(error)
                 return
             }
-            
             // Parse JSON data
             if let data = data {
                 self.packages = self.parseJsonData(data: data)
@@ -92,36 +90,48 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! moreViewCell
         
-        tableView.backgroundView = UIImageView(image: UIImage(named: "包裹"))
-        tableView.backgroundView?.contentMode = .center
-        tableView.backgroundView?.alpha = 0.1
-        
         cell.departmentLabel?.text = packages[indexPath.row].department
         cell.nameTextLabel?.text = packages[indexPath.row].name
         return cell
     }
     
+    func setBG(img: String, width: CGFloat, height: CGFloat, alpha: CGFloat){
+        let iv = UIImageView(image: UIImage(named: img))
+        iv.contentMode = .scaleAspectFit
+        iv.layer.frame = CGRect(x: tableview.bounds.midX-width/2, y: tableview.bounds.midY-height/2, width: width, height: height)
+        let tableViewBackgroundView = UIView()
+        tableViewBackgroundView.addSubview(iv)
+        tableview.backgroundView = tableViewBackgroundView
+        tableview.backgroundView?.alpha = alpha
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBG(img: "包裹", width: 256, height: 256, alpha: 0.03)
+        
         
         switch service {
         case "校車時間":
-            Url = "https://www.doc.ncnu.edu.tw/affairs/index.php/2012-07-11-07-39-40/category/11-2012-07-12-01-50-48?download=323:106-2-107-2-24-107-7-1"
+            Url = "https://m.ncnu.edu.tw/MobileWeb/Home/bus"
             getWebView(url: Url)
-//            print(service)
         case "包裹查詢":
             Url = "http://cbooking.ddns.net/ncnu/package.php"
             getData(packageURL: Url)
-//            print(service)
             break
         case "汽機車登記":
             Url = "https://ccweb.ncnu.edu.tw/student/"
             getWebView(url: Url)
-//            print(service)
         case "緊急聯絡資訊":
             Url = "https://m.ncnu.edu.tw/MobileWeb/Home/phone"
             getWebView(url: Url)
-//            print(service)
+        case "行事曆":
+            let month = Calendar.current.component(.month, from: Date())
+            var year = Calendar.current.component(.year, from: Date())-1912
+            if(month > 7){
+                year = year + 1
+            }
+            Url = "https://www.academic.ncnu.edu.tw/lesson/data/\(year)%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%A1%8C%E4%BA%8B%E6%9B%86.pdf"
+            getWebView(url: Url)
         default:
             break
         }

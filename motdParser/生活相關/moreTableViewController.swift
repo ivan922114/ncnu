@@ -9,7 +9,7 @@
 import UIKit
 
 class moreTableViewController: UITableViewController {
-    var services = [["校車時間","包裹查詢","汽機車登記","緊急聯絡資訊"],["校車站","包裹","汽機車","緊急聯絡資訊"]]
+    var services = [["校車時間","包裹查詢","汽機車登記","緊急聯絡資訊","行事曆"],["校車站","包裹","汽機車","緊急聯絡資訊","行事曆"]]
     override func viewDidLoad() {
         super.viewDidLoad()
         

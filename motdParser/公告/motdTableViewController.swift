@@ -65,7 +65,7 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
         switch motds[indexPath.row].category {
         case Items:
             cell.title.text = motds[indexPath.row].title
-            //cell.category.text = motds[indexPath.row].category
+            cell.date.text = motds[indexPath.row].created_at
             return cell
             
         default:
@@ -123,6 +123,7 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
                     motd.title = jsonMotd["title"] as! String
                     motd.publisher = jsonMotd["publisher"] as! String
                     motd.category = jsonMotd["category"] as! String
+                    motd.created_at = jsonMotd["created_at"] as! String
                     motd.description = jsonMotd["description"] as! [String : String]
                     motds.append(motd)
                 }

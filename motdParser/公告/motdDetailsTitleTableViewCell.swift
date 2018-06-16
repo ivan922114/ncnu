@@ -1,19 +1,17 @@
 //
-//  motdTableViewCell.swift
+//  motdDetailsTitleTableViewCell
 //  motdParser
 //
-//  Created by Seng Lam on 2018/5/2.
+//  Created by Seng Lam on 2018/6/17.
 //  Copyright © 2018年 Seng Lam. All rights reserved.
 //
 
 import UIKit
 
-class motdTableViewCell: UITableViewCell {
+class motdDetailsTitleTableViewCell: UITableViewCell {
 
-    @IBOutlet var title :UILabel!
-    @IBOutlet var date :UILabel!
-//    @IBOutlet var descript :UIWebView!
-    
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
