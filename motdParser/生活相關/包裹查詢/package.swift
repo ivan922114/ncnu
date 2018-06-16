@@ -18,14 +18,14 @@ class Package{
     var remark = String()
     var type = String()
     var dict:[String:String]{
-        return ["company":company,
-                "date":date,
-                "department":department,
-                "logID":logID,
-                "name":name,
-                "recDay":recDay,
-                "regNumber":regNumber,
-                "remark":remark,
-                "type":type]
+        return ["收件人姓名":name,
+                "可能系級":department,
+                "收件日期":date,
+                "郵寄公司":company,
+                "掛號號碼":regNumber,
+                "收件天數":recDay,
+                "logID ":logID,
+                "種類":type,
+                "備註":remark]
     }
 }
