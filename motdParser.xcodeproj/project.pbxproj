@@ -29,6 +29,7 @@
 		AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECE20C66F0A0028D71E /* courseDetailsViewController.swift */; };
 		AF189ED520C66F0A0028D71E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECF20C66F0A0028D71E /* TableViewController.swift */; };
 		AF189ED620C66F0A0028D71E /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ED020C66F0A0028D71E /* Courses.swift */; };
+		AF22AE2C20D4FB1700476B0F /* packageDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22AE2B20D4FB1700476B0F /* packageDetailsTableViewCell.swift */; };
 		AF25D45A20D36FB20075CEBF /* moreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D45920D36FB20075CEBF /* moreTableViewController.swift */; };
 		AF25D45F20D370160075CEBF /* moreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D45E20D370160075CEBF /* moreTableViewCell.swift */; };
 		AF25D46120D3728A0075CEBF /* moreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D46020D3728A0075CEBF /* moreViewController.swift */; };
@@ -72,6 +73,7 @@
 		AF189ECE20C66F0A0028D71E /* courseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseDetailsViewController.swift; sourceTree = "<group>"; };
 		AF189ECF20C66F0A0028D71E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AF189ED020C66F0A0028D71E /* Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		AF22AE2B20D4FB1700476B0F /* packageDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		AF25D45920D36FB20075CEBF /* moreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreTableViewController.swift; sourceTree = "<group>"; };
 		AF25D45E20D370160075CEBF /* moreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreTableViewCell.swift; sourceTree = "<group>"; };
 		AF25D46020D3728A0075CEBF /* moreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moreViewController.swift; path = "motdParser/生活相關/moreViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -166,6 +168,7 @@
 			children = (
 				16C7E5A320D40A5900609B09 /* package.swift */,
 				16C7E5A520D41BC100609B09 /* packageDetailsTableViewController.swift */,
+				AF22AE2B20D4FB1700476B0F /* packageDetailsTableViewCell.swift */,
 			);
 			path = "包裹查詢";
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				AF55038620ABD0F10036DB44 /* motdMenuTableViewController.swift in Sources */,
 				16C7E5A420D40A5900609B09 /* package.swift in Sources */,
 				AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */,
+				AF22AE2C20D4FB1700476B0F /* packageDetailsTableViewCell.swift in Sources */,
 				AF871E4E20D0328E00403C37 /* placesTableViewCell.swift in Sources */,
 				AF25D45A20D36FB20075CEBF /* moreTableViewController.swift in Sources */,
 				AF55038A20ABD4340036DB44 /* MenuTransitionManager.swift in Sources */,

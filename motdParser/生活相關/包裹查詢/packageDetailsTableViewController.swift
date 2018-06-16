@@ -11,11 +11,13 @@ import UIKit
 class packageDetailsTableViewController: UITableViewController {
 
     var package = Package()
-    var arr: [String] = Array()
+    var arrKey: [String] = Array()
+    var arrValue: [String] = Array()
     override func viewDidLoad() {
         super.viewDidLoad()
         for (key,value) in package.dict {
-            arr.append("\(key):\t\(value)")
+            arrKey.append(key)
+            arrValue.append(value)
         }
     }
 
@@ -33,13 +35,14 @@ class packageDetailsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arr.count
+        return arrKey.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = arr[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! packageDetailsTableViewCell
+        cell.keyLabel.text = arrKey[indexPath.row]
+        cell.valueLabel.text = arrValue[indexPath.row]
         return cell
     }
 

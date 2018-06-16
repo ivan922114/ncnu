@@ -440,22 +440,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="hGG-xo-pRB" style="IBUITableViewCellStyleDefault" id="9V3-tl-vWt">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="9V3-tl-vWt" customClass="packageDetailsTableViewCell" customModule="motdParser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9V3-tl-vWt" id="sdl-Dj-wdY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hGG-xo-pRB">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="4Ul-vF-6fG">
+                                            <rect key="frame" x="16" y="21" width="343" height="48"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nE-6p-f3C">
+                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="7rq-on-CAx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hag-Gy-ZJP">
+                                                    <rect key="frame" x="105" y="0.0" width="238" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="zBC-Ay-aGT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HanWangYenLight" family="HanWangYenLight" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4Ul-vF-6fG" secondAttribute="trailing" id="KeN-vK-VvY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4Ul-vF-6fG" secondAttribute="bottom" constant="10" id="N0u-1E-slb"/>
+                                        <constraint firstItem="4Ul-vF-6fG" firstAttribute="leading" secondItem="sdl-Dj-wdY" secondAttribute="leadingMargin" id="YdH-AJ-Zhe"/>
+                                        <constraint firstItem="4Ul-vF-6fG" firstAttribute="top" secondItem="sdl-Dj-wdY" secondAttribute="topMargin" constant="10" id="hLM-FP-T4p"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="keyLabel" destination="5nE-6p-f3C" id="ny1-0b-blq"/>
+                                    <outlet property="valueLabel" destination="hag-Gy-ZJP" id="hPC-Ek-gBv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -466,7 +492,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd8-5u-724" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2649" y="2590"/>
+            <point key="canvasLocation" x="-2650.4000000000001" y="2589.3553223388308"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="EVY-CI-GRo">
@@ -878,6 +904,6 @@
         <image name="ncnu_logo" width="1045" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wjP-Qp-4aS"/>
+        <segue reference="qjp-1I-9d8"/>
     </inferredMetricsTieBreakers>
 </document>
