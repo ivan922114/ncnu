@@ -104,7 +104,7 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
             getWebView(url: Url)
 //            print(service)
         case "包裹查詢":
-            Url = "http://cbooking.ddns.net/87zone/package.php"
+            Url = "http://cbooking.ddns.net/ncnu/package.php"
             getData(packageURL: Url)
 //            print(service)
             break
