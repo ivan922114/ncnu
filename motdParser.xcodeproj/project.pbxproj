@@ -30,6 +30,7 @@
 		AF189ED520C66F0A0028D71E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECF20C66F0A0028D71E /* TableViewController.swift */; };
 		AF189ED620C66F0A0028D71E /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ED020C66F0A0028D71E /* Courses.swift */; };
 		AF22AE2C20D4FB1700476B0F /* packageDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22AE2B20D4FB1700476B0F /* packageDetailsTableViewCell.swift */; };
+		AF22AE2E20D5132D00476B0F /* moreViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22AE2D20D5132D00476B0F /* moreViewCell.swift */; };
 		AF25D45A20D36FB20075CEBF /* moreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D45920D36FB20075CEBF /* moreTableViewController.swift */; };
 		AF25D45F20D370160075CEBF /* moreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D45E20D370160075CEBF /* moreTableViewCell.swift */; };
 		AF25D46120D3728A0075CEBF /* moreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25D46020D3728A0075CEBF /* moreViewController.swift */; };
@@ -74,6 +75,7 @@
 		AF189ECF20C66F0A0028D71E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AF189ED020C66F0A0028D71E /* Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
 		AF22AE2B20D4FB1700476B0F /* packageDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		AF22AE2D20D5132D00476B0F /* moreViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreViewCell.swift; sourceTree = "<group>"; };
 		AF25D45920D36FB20075CEBF /* moreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreTableViewController.swift; sourceTree = "<group>"; };
 		AF25D45E20D370160075CEBF /* moreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreTableViewCell.swift; sourceTree = "<group>"; };
 		AF25D46020D3728A0075CEBF /* moreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moreViewController.swift; path = "motdParser/生活相關/moreViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -216,6 +218,7 @@
 				AF25D46020D3728A0075CEBF /* moreViewController.swift */,
 				AF25D45920D36FB20075CEBF /* moreTableViewController.swift */,
 				AF25D45E20D370160075CEBF /* moreTableViewCell.swift */,
+				AF22AE2D20D5132D00476B0F /* moreViewCell.swift */,
 			);
 			path = "生活相關";
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				AF189ED320C66F0A0028D71E /* coursesTableViewCell.swift in Sources */,
 				AF55038620ABD0F10036DB44 /* motdMenuTableViewController.swift in Sources */,
 				16C7E5A420D40A5900609B09 /* package.swift in Sources */,
+				AF22AE2E20D5132D00476B0F /* moreViewCell.swift in Sources */,
 				AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */,
 				AF22AE2C20D4FB1700476B0F /* packageDetailsTableViewCell.swift in Sources */,
 				AF871E4E20D0328E00403C37 /* placesTableViewCell.swift in Sources */,

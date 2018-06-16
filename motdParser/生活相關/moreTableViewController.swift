@@ -12,13 +12,19 @@ class moreTableViewController: UITableViewController {
     var services = [["校車時間","包裹查詢","汽機車登記","緊急聯絡資訊"],["校車站","包裹","汽機車","緊急聯絡資訊"]]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "016"))
+        self.tableView.backgroundView?.contentMode = .scaleAspectFill
+        self.tableView.backgroundView?.alpha = 0.1
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 
     override func didReceiveMemoryWarning() {

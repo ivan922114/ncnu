@@ -15,6 +15,11 @@ class packageDetailsTableViewController: UITableViewController {
     var arrValue: [String] = Array()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "包裹"))
+        self.tableView.backgroundView?.contentMode = .center
+        self.tableView.backgroundView?.alpha = 0.1
+        
         for (key,value) in package.dict {
             arrKey.append(key)
             arrValue.append(value)
@@ -41,6 +46,7 @@ class packageDetailsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! packageDetailsTableViewCell
+        
         cell.keyLabel.text = arrKey[indexPath.row]
         cell.valueLabel.text = arrValue[indexPath.row]
         return cell

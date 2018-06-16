@@ -90,14 +90,20 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = packages[indexPath.row].department
-        cell.detailTextLabel?.text = packages[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! moreViewCell
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "包裹"))
+        tableView.backgroundView?.contentMode = .center
+        tableView.backgroundView?.alpha = 0.1
+        
+        cell.departmentLabel?.text = packages[indexPath.row].department
+        cell.nameTextLabel?.text = packages[indexPath.row].name
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         switch service {
         case "校車時間":
             Url = "https://www.doc.ncnu.edu.tw/affairs/index.php/2012-07-11-07-39-40/category/11-2012-07-12-01-50-48?download=323:106-2-107-2-24-107-7-1"
