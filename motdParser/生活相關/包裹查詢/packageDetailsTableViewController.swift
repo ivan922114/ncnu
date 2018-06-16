@@ -19,7 +19,7 @@ class packageDetailsTableViewController: UITableViewController {
             arrKey.append(key)
             arrValue.append(value)
         }
-    }//
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
