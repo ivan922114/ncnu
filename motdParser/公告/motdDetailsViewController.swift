@@ -31,12 +31,14 @@ class motdDetailsViewController: UIViewController, WKNavigationDelegate {
     }
     
     func configure(){
-        var dscription = String()
-        if motd.description["#cdata-section"]! != ""{
-            dscription = motd.description["#cdata-section"]!
+        var base = motd.description
+        if motd.attach_name[0] != ""{
+            var i = 0
+            for _ in motd.attach_name{
+                base += "<br><hr style='color: black;'><br>附件：<br><a href='\(motd.attach_url[i])'>\(motd.attach_name[i])</a>"
+                i += 1
+            }
         }
-        
-        let base = dscription
         webView.loadHTMLString(base, baseURL: nil)
         webView.navigationDelegate = self
     }

@@ -20,7 +20,7 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
     let menuTransitionManager = MenuTransitionManager()
     var delegate: MenuTransitionManagerDelegate?
     
-    let motdURL = "https://api.ncnu.edu.tw/API/get.aspx?json=info_ncnu&month_include=6"
+    let motdURL = "https://api.ncnu.edu.tw/API/get.aspx?json=info_ncnu&month_include=1"
     var motds = [Motd]()
     
     override func viewDidLoad() {
@@ -113,26 +113,49 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:[String:AnyObject]]
            
             // Parse JSON data
-            let jsonMotds = jsonResult?["info_ncnu"]?["item"] as? [AnyObject]
-            for jsonMotd in jsonMotds! {
-                var motd = Motd()
-                if jsonMotd["category"] as! String != "" {
-                    category.append(jsonMotd["category"] as! String)
-                }
-                if jsonMotd["category"] as! String == Items{
-                    motd.title = jsonMotd["title"] as! String
-                    motd.publisher = jsonMotd["publisher"] as! String
-                    motd.category = jsonMotd["category"] as! String
-                    motd.created_at = jsonMotd["created_at"] as! String
-                    motd.description = jsonMotd["description"] as! [String : String]
-                    if let attach_files = jsonMotd["attach_files"] as? [AnyObject]{
-                        for attach_file in attach_files{
-                            
-                        }
+            if let jsonMotds = jsonResult?["info_ncnu"]?["item"] as? [AnyObject]{
+                for jsonMotd in jsonMotds {
+                    var motd = Motd()
+                    if jsonMotd["category"] as! String != "" {
+                        category.append(jsonMotd["category"] as! String)
                     }
-                    motds.append(motd)
+                    if jsonMotd["category"] as! String == Items{
+                        motd.title = jsonMotd["title"] as! String
+                        motd.publisher = jsonMotd["publisher"] as! String
+                        motd.category = jsonMotd["category"] as! String
+                        motd.created_at = jsonMotd["created_at"] as! String
+                        if let jsonDescription = jsonMotd["description"] as? [String:String]{
+                            motd.description = jsonDescription["#cdata-section"]!
+                        }
+                        if let jsonAttachs = jsonMotd["attach_files"] as? [String: AnyObject]{
+                            for (_,value) in jsonAttachs{
+                                if let attach_name = value["@attach_name"]{
+                                    if motd.attach_name[0] != ""{
+                                        motd.attach_name.append(attach_name as! String)
+                                    }else{
+                                        motd.attach_name[0] = attach_name as! String
+                                    }
+                                }
+                                if let attach_url = value["@attach_url"]{
+                                    if motd.attach_url[0] != ""{
+                                        motd.attach_url.append(attach_url as! String)
+                                    }else{
+                                        motd.attach_url[0] = attach_url as! String
+                                    }
+                                }
+                                if let attach_size = value["@attach_size"]{
+                                    if motd.attach_size[0] != ""{
+                                        motd.attach_size.append(attach_size as! String)
+                                    }else{
+                                        motd.attach_size[0] = attach_size as! String
+                                    }
+                                }
+                            }
+                        }
+                        motds.append(motd)
+                    }
+                    
                 }
-                
             }
         } catch {
             print(error)

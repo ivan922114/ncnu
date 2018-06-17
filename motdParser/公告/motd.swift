@@ -11,9 +11,11 @@ import Foundation
 struct Motd: Codable {
     var title = ""
     var publisher = ""
-    var description = ["" : ""]
-    var attach_files = ["" : ""]
+    var description = ""
     var email = ""
+    var attach_name = [""]
+    var attach_url = [""]
+    var attach_size = [""]
     var created_at = ""
     var publish_start_at = ""
     var publish_end_at = ""
