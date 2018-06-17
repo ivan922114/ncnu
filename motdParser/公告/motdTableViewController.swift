@@ -139,9 +139,8 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMotdDetails" {
             if let indexPath = tableView.indexPathForSelectedRow{
-                let destinationController = segue.destination as! motdDetailsViewController
-                destinationController.navigationItem.title = motds[indexPath.row].title
-                destinationController.title = motds[indexPath.row].title
+                let destinationController = segue.destination as! motdDetailsTableViewController
+                destinationController.motd = motds[indexPath.row]
                 if motds[indexPath.row].description["#cdata-section"]! != ""{
                     destinationController.descript = motds[indexPath.row].description["#cdata-section"]!
                 }

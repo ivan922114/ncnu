@@ -1,5 +1,5 @@
 //
-//  motdDetailsTitleTableViewCell
+//  motdDetailsTableViewCell
 //  motdParser
 //
 //  Created by Seng Lam on 2018/6/17.
@@ -8,10 +8,11 @@
 
 import UIKit
 
-class motdDetailsTitleTableViewCell: UITableViewCell {
+class motdDetailsTableViewCell: UITableViewCell{
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
