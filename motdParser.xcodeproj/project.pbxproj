@@ -11,7 +11,7 @@
 		1608554720D0F66500B647C5 /* mapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1608554620D0F66500B647C5 /* mapDetailViewController.swift */; };
 		16107AC920CFBBBC00E20698 /* place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16107AC820CFBBBC00E20698 /* place.swift */; };
 		16107ACB20CFC02400E20698 /* xapi in Resources */ = {isa = PBXBuildFile; fileRef = 16107ACA20CFC02400E20698 /* xapi */; };
-		164333CF20D59645003AA7EF /* motdDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164333CE20D59645003AA7EF /* motdDetailsTableViewCell.swift */; };
+		164B9F5020D6C12B00962EA3 /* motdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164B9F4F20D6C12B00962EA3 /* motdDetailsViewController.swift */; };
 		165D9C3C209960000036E8B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C3B209960000036E8B3 /* AppDelegate.swift */; };
 		165D9C41209960000036E8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165D9C3F209960000036E8B3 /* Main.storyboard */; };
 		165D9C43209960010036E8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165D9C42209960010036E8B3 /* Assets.xcassets */; };
@@ -20,8 +20,6 @@
 		165D9C502099679E0036E8B3 /* motd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C4F2099679E0036E8B3 /* motd.swift */; };
 		165D9C5220996A670036E8B3 /* motdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C5120996A670036E8B3 /* motdTableViewCell.swift */; };
 		167380A120D1208C00E982E5 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167380A020D1208C00E982E5 /* PlaceViewController.swift */; };
-		16BB180320D62D9D00BC4AAD /* motdDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BB180220D62D9D00BC4AAD /* motdDetailsTableViewController.swift */; };
-		16BB180520D63DB800BC4AAD /* motdDetailWebTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BB180420D63DB800BC4AAD /* motdDetailWebTableViewCell.swift */; };
 		16BC1E4420CADEA400C6C666 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC1E4320CADEA400C6C666 /* mapViewController.swift */; };
 		16C7E5A420D40A5900609B09 /* package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C7E5A320D40A5900609B09 /* package.swift */; };
 		16C7E5A620D41BC100609B09 /* packageDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C7E5A520D41BC100609B09 /* packageDetailsTableViewController.swift */; };
@@ -54,7 +52,7 @@
 		1608554620D0F66500B647C5 /* mapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapDetailViewController.swift; sourceTree = "<group>"; };
 		16107AC820CFBBBC00E20698 /* place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = place.swift; sourceTree = "<group>"; };
 		16107ACA20CFC02400E20698 /* xapi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = xapi; sourceTree = "<group>"; };
-		164333CE20D59645003AA7EF /* motdDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		164B9F4F20D6C12B00962EA3 /* motdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdDetailsViewController.swift; sourceTree = "<group>"; };
 		165D9C38209960000036E8B3 /* motdParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motdParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165D9C3B209960000036E8B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165D9C40209960000036E8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,8 +63,6 @@
 		165D9C4F2099679E0036E8B3 /* motd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motd.swift; sourceTree = "<group>"; };
 		165D9C5120996A670036E8B3 /* motdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdTableViewCell.swift; sourceTree = "<group>"; };
 		167380A020D1208C00E982E5 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
-		16BB180220D62D9D00BC4AAD /* motdDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdDetailsTableViewController.swift; sourceTree = "<group>"; };
-		16BB180420D63DB800BC4AAD /* motdDetailWebTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdDetailWebTableViewCell.swift; sourceTree = "<group>"; };
 		16BC1E4320CADEA400C6C666 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		16C7E5A320D40A5900609B09 /* package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = package.swift; sourceTree = "<group>"; };
 		16C7E5A520D41BC100609B09 /* packageDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageDetailsTableViewController.swift; sourceTree = "<group>"; };
@@ -182,15 +178,13 @@
 		AF189EC820C66CBE0028D71E /* 公告 */ = {
 			isa = PBXGroup;
 			children = (
-				165D9C4D209960560036E8B3 /* motdTableViewController.swift */,
-				16BB180220D62D9D00BC4AAD /* motdDetailsTableViewController.swift */,
-				164333CE20D59645003AA7EF /* motdDetailsTableViewCell.swift */,
-				16BB180420D63DB800BC4AAD /* motdDetailWebTableViewCell.swift */,
-				165D9C5120996A670036E8B3 /* motdTableViewCell.swift */,
 				165D9C4F2099679E0036E8B3 /* motd.swift */,
-				AF55038520ABD0F10036DB44 /* motdMenuTableViewController.swift */,
+				165D9C5120996A670036E8B3 /* motdTableViewCell.swift */,
 				AF55038720ABD1DF0036DB44 /* motdMenuTableViewCell.swift */,
 				AF55038920ABD4340036DB44 /* MenuTransitionManager.swift */,
+				AF55038520ABD0F10036DB44 /* motdMenuTableViewController.swift */,
+				164B9F4F20D6C12B00962EA3 /* motdDetailsViewController.swift */,
+				165D9C4D209960560036E8B3 /* motdTableViewController.swift */,
 			);
 			path = "公告";
 			sourceTree = "<group>";
@@ -373,9 +367,7 @@
 				16BC1E4420CADEA400C6C666 /* mapViewController.swift in Sources */,
 				AF871E3D20D0315A00403C37 /* placesTableViewController.swift in Sources */,
 				AF25D46120D3728A0075CEBF /* moreViewController.swift in Sources */,
-				164333CF20D59645003AA7EF /* motdDetailsTableViewCell.swift in Sources */,
 				165D9C502099679E0036E8B3 /* motd.swift in Sources */,
-				16BB180520D63DB800BC4AAD /* motdDetailWebTableViewCell.swift in Sources */,
 				AF189ED120C66F0A0028D71E /* departmentTableViewController.swift in Sources */,
 				AF189ED620C66F0A0028D71E /* Courses.swift in Sources */,
 				AF189ED520C66F0A0028D71E /* TableViewController.swift in Sources */,
@@ -383,12 +375,12 @@
 				AF25D45F20D370160075CEBF /* moreTableViewCell.swift in Sources */,
 				AF55038820ABD1DF0036DB44 /* motdMenuTableViewCell.swift in Sources */,
 				AF189ED320C66F0A0028D71E /* coursesTableViewCell.swift in Sources */,
+				164B9F5020D6C12B00962EA3 /* motdDetailsViewController.swift in Sources */,
 				AF55038620ABD0F10036DB44 /* motdMenuTableViewController.swift in Sources */,
 				16C7E5A420D40A5900609B09 /* package.swift in Sources */,
 				AF22AE2E20D5132D00476B0F /* moreViewCell.swift in Sources */,
 				AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */,
 				AF22AE2C20D4FB1700476B0F /* packageDetailsTableViewCell.swift in Sources */,
-				16BB180320D62D9D00BC4AAD /* motdDetailsTableViewController.swift in Sources */,
 				AF871E4E20D0328E00403C37 /* placesTableViewCell.swift in Sources */,
 				AF25D45A20D36FB20075CEBF /* moreTableViewController.swift in Sources */,
 				AF55038A20ABD4340036DB44 /* MenuTransitionManager.swift in Sources */,

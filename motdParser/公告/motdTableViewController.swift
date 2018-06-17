@@ -125,6 +125,11 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
                     motd.category = jsonMotd["category"] as! String
                     motd.created_at = jsonMotd["created_at"] as! String
                     motd.description = jsonMotd["description"] as! [String : String]
+                    if let attach_files = jsonMotd["attach_files"] as? [AnyObject]{
+                        for attach_file in attach_files{
+                            
+                        }
+                    }
                     motds.append(motd)
                 }
                 
@@ -139,11 +144,8 @@ class motdTableViewController: UITableViewController, MenuTransitionManagerDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMotdDetails" {
             if let indexPath = tableView.indexPathForSelectedRow{
-                let destinationController = segue.destination as! motdDetailsTableViewController
+                let destinationController = segue.destination as! motdDetailsViewController
                 destinationController.motd = motds[indexPath.row]
-                if motds[indexPath.row].description["#cdata-section"]! != ""{
-                    destinationController.descript = motds[indexPath.row].description["#cdata-section"]!
-                }
             }
         }
         if segue.identifier == "gotomotdTable" {

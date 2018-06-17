@@ -9,18 +9,19 @@
 import Foundation
 
 struct Motd: Codable {
-    var title: String = ""
-    var publisher: String = ""
-    var description: [String:String] = ["": ""]
-    var email: String = ""
-    var created_at: String = ""
-    var publish_start_at: String = ""
-    var publish_end_at: String = ""
-    var Is_activity: Bool = false
-    var activity_start_at: String = ""
-    var activity_end_at: String = ""
-    var activity_location: String = ""
-    var category: String = ""
+    var title = ""
+    var publisher = ""
+    var description = ["" : ""]
+    var attach_files = ["" : ""]
+    var email = ""
+    var created_at = ""
+    var publish_start_at = ""
+    var publish_end_at = ""
+    var Is_activity = false
+    var activity_start_at = ""
+    var activity_end_at = ""
+    var activity_location = ""
+    var category = ""
     
     
 }
