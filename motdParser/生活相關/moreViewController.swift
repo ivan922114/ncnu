@@ -14,6 +14,7 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
     var packages: [Package] = []
     var service = String()
     var Url = String()
+    var Items: String = "最新消息"
     
     @IBOutlet var tableview: UITableView!
     
@@ -144,6 +145,11 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
                 destinationController.package = packages[indexPath.row]
             }
         }
+        if segue.identifier == "showPackageDepartment"{
+            let destinationController = segue.destination as! packageMenuTableViewController
+            
+            destinationController.currentItem = navigationItem.title!
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -151,6 +157,10 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        let sourceController = segue.source as! packageMenuTableViewController
+        self.title = sourceController.currentItem
+    }
 
     /*
     // MARK: - Navigation

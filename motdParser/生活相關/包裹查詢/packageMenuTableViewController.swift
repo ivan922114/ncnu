@@ -9,24 +9,60 @@
 import UIKit
 class packageMenuTableViewController: UITableViewController {
 
-    var menuItems = ["中文系", "資工系", "應化系"]
-    var currentItem = "中文系"
+    var menuItems = [""]
+    var currentItem = "資工系"
     var i = 0
+    func getData(packageURL: String){
+        guard let packageUrl = URL(string: packageURL) else {
+            return
+        }
+        let request = URLRequest(url: packageUrl)
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            if let error = error {
+                print(error)
+                return
+            }
+            // Parse JSON data
+            if let data = data {
+                self.menuItems = self.parseJsonData(data: data)
+                // Reload table view
+                OperationQueue.main.addOperation({
+                    self.tableView.reloadData()
+                })
+            }
+        })
+        task.resume()
+    }
     
+    func parseJsonData(data: Data) -> [String] {
+        do {
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:AnyObject]
+            
+            // Parse JSON data
+            if let jsonDepartments = jsonResult?["items"] as? [AnyObject]{
+                for jsonDepartment in jsonDepartments {
+                    if let depatment = jsonDepartment as? String{
+                        if depatment != ""{
+                            menuItems.append(depatment)
+                        }
+                    }
+                }
+            }
+        } catch {
+            print(error)
+        }
+        return menuItems
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Set(menuItems).count != menuItems.count{
-            menuItems = Array(Set(menuItems))
-        }
         for menuItem in menuItems{
             if menuItem == ""{
                 menuItems.remove(at: i)
             }
             i += 1
         }
-        menuItems.sort()
-        print(menuItems)
+        getData(packageURL: "http://cbooking.ddns.net/ncnu/package.php?opt=department")
         
     }
     
@@ -57,12 +93,18 @@ class packageMenuTableViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Navigation
+    // MARK: - segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let menuTableViewController = segue.source as! packageDetailsTableViewController
-        if let selectedIndexPath = menuTableViewController.tableView.indexPathForSelectedRow{
-            currentItem = menuItems[selectedIndexPath.row]
+        if let IndexPath = tableView.indexPathForSelectedRow{
+            let menuTableViewController = segue.destination as! moreViewController
+            currentItem = menuItems[IndexPath.row]
+            menuTableViewController.Items = currentItem
+            
+            var urlComponents: URLComponents = URLComponents(string: "http://cbooking.ddns.net/ncnu/package.php?")!
+            urlComponents.queryItems = [URLQueryItem(name: "opt", value: "getData"), URLQueryItem(name:"department", value:currentItem)]
+            let url = urlComponents.string!
+            menuTableViewController.getData(packageURL: url)
         }
     }
     

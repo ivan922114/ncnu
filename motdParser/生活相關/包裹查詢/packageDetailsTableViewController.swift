@@ -8,14 +8,7 @@
 
 import UIKit
 
-@objc protocol packageMenuTransitionManagerDelegate {
-    func dismiss()
-}
-
-class packageDetailsTableViewController: UITableViewController, packageMenuTransitionManagerDelegate {
-    
-    let menuTransitionManager = MenuTransitionManager()
-    var delegate: packageMenuTransitionManagerDelegate?
+class packageDetailsTableViewController: UITableViewController {
     
     var package = Package()
     var arrKey: [String] = Array()
@@ -70,24 +63,6 @@ class packageDetailsTableViewController: UITableViewController, packageMenuTrans
 
     // MARK: - Segue
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showPackageDepartment" {
-            let menuTableViewController = segue.destination as! motdMenuTableViewController
-            menuTableViewController.currentItem = self.title!
-            menuTableViewController.transitioningDelegate = menuTransitionManager
-            menuTransitionManager.delegate = self
-//            menuTableViewController.menuItems = category
-        }
-    }
-    
-    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        let sourceController = segue.source as! packageMenuTableViewController
-        self.title = sourceController.currentItem
-    }
-    
-    func dismiss() {
-        dismiss(animated: true, completion: nil)
-    }
 
     /*
     // Override to support conditional editing of the table view.

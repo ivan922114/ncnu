@@ -24,7 +24,6 @@
 		16C7E5A620D41BC100609B09 /* packageDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C7E5A520D41BC100609B09 /* packageDetailsTableViewController.swift */; };
 		AF139C0420D7820B006EAAB2 /* packageMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF139C0320D7820B006EAAB2 /* packageMenuTableViewController.swift */; };
 		AF139C0620D79B78006EAAB2 /* packageMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF139C0520D79B78006EAAB2 /* packageMenuTableViewCell.swift */; };
-		AF139C0820D7A57C006EAAB2 /* packageMenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF139C0720D7A57C006EAAB2 /* packageMenuTransitionManager.swift */; };
 		AF189ED120C66F0A0028D71E /* departmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECB20C66F0A0028D71E /* departmentTableViewController.swift */; };
 		AF189ED220C66F0A0028D71E /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = AF189ECC20C66F0A0028D71E /* data.xml */; };
 		AF189ED320C66F0A0028D71E /* coursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECD20C66F0A0028D71E /* coursesTableViewCell.swift */; };
@@ -71,7 +70,6 @@
 		969994FB26205C01574EE682 /* Pods-motdParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motdParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-motdParser/Pods-motdParser.release.xcconfig"; sourceTree = "<group>"; };
 		AF139C0320D7820B006EAAB2 /* packageMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageMenuTableViewController.swift; sourceTree = "<group>"; };
 		AF139C0520D79B78006EAAB2 /* packageMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageMenuTableViewCell.swift; sourceTree = "<group>"; };
-		AF139C0720D7A57C006EAAB2 /* packageMenuTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageMenuTransitionManager.swift; sourceTree = "<group>"; };
 		AF189ECB20C66F0A0028D71E /* departmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = departmentTableViewController.swift; sourceTree = "<group>"; };
 		AF189ECC20C66F0A0028D71E /* data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data.xml; sourceTree = "<group>"; };
 		AF189ECD20C66F0A0028D71E /* coursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coursesTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,10 +171,9 @@
 			children = (
 				16C7E5A320D40A5900609B09 /* package.swift */,
 				AF22AE2B20D4FB1700476B0F /* packageDetailsTableViewCell.swift */,
+				AF139C0520D79B78006EAAB2 /* packageMenuTableViewCell.swift */,
 				16C7E5A520D41BC100609B09 /* packageDetailsTableViewController.swift */,
 				AF139C0320D7820B006EAAB2 /* packageMenuTableViewController.swift */,
-				AF139C0520D79B78006EAAB2 /* packageMenuTableViewCell.swift */,
-				AF139C0720D7A57C006EAAB2 /* packageMenuTransitionManager.swift */,
 			);
 			path = "包裹查詢";
 			sourceTree = "<group>";
@@ -374,7 +371,6 @@
 				AF25D46120D3728A0075CEBF /* moreViewController.swift in Sources */,
 				165D9C502099679E0036E8B3 /* motd.swift in Sources */,
 				AF189ED120C66F0A0028D71E /* departmentTableViewController.swift in Sources */,
-				AF139C0820D7A57C006EAAB2 /* packageMenuTransitionManager.swift in Sources */,
 				AF189ED620C66F0A0028D71E /* Courses.swift in Sources */,
 				AF189ED520C66F0A0028D71E /* TableViewController.swift in Sources */,
 				AF139C0620D79B78006EAAB2 /* packageMenuTableViewCell.swift in Sources */,
