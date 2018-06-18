@@ -8,13 +8,18 @@
 
 import UIKit
 import WebKit
-class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDelegate, UITableViewDataSource, URLSessionDataDelegate{
+class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDelegate, UITableViewDataSource, URLSessionDataDelegate, MenuTransitionManagerDelegate{
+    
+    func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
     
     let fullScreenSize = UIScreen.main.bounds.size
     var packages: [Package] = []
     var service = String()
     var Url = String()
     var Items: String = "最新消息"
+    let menuTransitionManager = MenuTransitionManager()
     
     @IBOutlet var tableview: UITableView!
     
@@ -147,8 +152,9 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
         }
         if segue.identifier == "showPackageDepartment"{
             let destinationController = segue.destination as! packageMenuTableViewController
-            
             destinationController.currentItem = navigationItem.title!
+            destinationController.transitioningDelegate = menuTransitionManager
+            menuTransitionManager.delegate = self
         }
     }
     
