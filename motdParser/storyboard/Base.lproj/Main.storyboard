@@ -367,7 +367,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5j-V3-Tgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="92C-VC-Dl1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="-335"/>
+            <point key="canvasLocation" x="1678" y="-355"/>
         </scene>
         <!--Courses-->
         <scene sceneID="RkU-Nj-0XD">
@@ -553,7 +553,7 @@
             </objects>
             <point key="canvasLocation" x="-2650.4000000000001" y="2589.3553223388308"/>
         </scene>
-        <!--包裹查詢-->
+        <!--Title-->
         <scene sceneID="EVY-CI-GRo">
             <objects>
                 <viewController id="Jsi-q8-Yd8" customClass="moreViewController" customModule="motdParser" customModuleProvider="target" sceneMemberID="viewController">
@@ -630,8 +630,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EPj-ne-RxH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="包裹查詢" id="HMJ-Pd-apR">
-                        <barButtonItem key="backBarButtonItem" title=" " id="YxI-05-QhU"/>
+                    <navigationItem key="navigationItem" title="Title" id="kyN-UT-yIf">
+                        <barButtonItem key="rightBarButtonItem" title="Menu" image="menu" id="FeD-nL-2Ue">
+                            <connections>
+                                <segue destination="u0a-wW-fZV" kind="presentation" identifier="showPackageDepartment" id="88u-Ru-HeA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="u3Y-tr-Lr0" id="5tL-1E-HN7"/>
@@ -989,6 +993,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7L-2l-ZTY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860" y="-1630"/>
+        </scene>
+        <!--Package Menu Table View Controller-->
+        <scene sceneID="CS2-HL-MhM">
+            <objects>
+                <tableViewController id="u0a-wW-fZV" customClass="packageMenuTableViewController" customModule="motdParser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" id="rcx-TO-LGe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="UWm-KG-042">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="69" id="DNF-b2-EOU" customClass="packageMenuTableViewCell" customModule="motdParser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="66" width="375" height="69"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DNF-b2-EOU" id="ql5-VB-gx5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvE-bT-mhx">
+                                            <rect key="frame" x="25" y="23.666666666666671" width="44" height="22"/>
+                                            <fontDescription key="fontDescription" name="SetoFont" family="SetoFont" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="xvE-bT-mhx" secondAttribute="centerY" id="pea-JC-Kzx"/>
+                                        <constraint firstItem="xvE-bT-mhx" firstAttribute="leading" secondItem="ql5-VB-gx5" secondAttribute="leadingMargin" constant="9" id="r9E-bc-BdY"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xvE-bT-mhx" secondAttribute="trailingMargin" id="tdc-XD-cmu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="xvE-bT-mhx" id="DaY-8j-MRu"/>
+                                    <segue destination="bjD-HO-NL3" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="tQf-Cf-Koy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="u0a-wW-fZV" id="Ds4-w6-i6i"/>
+                            <outlet property="delegate" destination="u0a-wW-fZV" id="4L6-S6-lwy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xoT-zj-I57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bjD-HO-NL3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1300" y="1871"/>
         </scene>
     </scenes>
     <resources>
