@@ -81,6 +81,7 @@ class moreViewController: UIViewController, WKNavigationDelegate, UITableViewDel
             view.addSubview(webView)
             webView.loadRequest(request)
         }
+        self.navigationItem.rightBarButtonItem = nil
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

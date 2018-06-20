@@ -66,7 +66,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.prefersLargeTitles = false
+//        navigationController?.navigationBar.prefersLargeTitles = false
         
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "023"))
         self.tableView.backgroundView?.contentMode = .scaleAspectFill

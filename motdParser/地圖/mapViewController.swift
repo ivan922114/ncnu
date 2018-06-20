@@ -76,10 +76,10 @@ class mapViewController: UIViewController,XMLParserDelegate,GMSMapViewDelegate,C
             self.mapView.clear()
             self.places.removeAll()
             let parser = XMLParser(data: data)
-            print(self.places.count)
+
             parser.delegate = self
             parser.parse()
-            print(self.places.count)
+
             for place in self.places{
                 let marker = GMSMarker()
                 marker.map = self.mapView

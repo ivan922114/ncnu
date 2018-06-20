@@ -20,7 +20,7 @@ class courseDetailsViewController: UIViewController,  WKNavigationDelegate{
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.prefersLargeTitles = false
+//        navigationController?.navigationBar.prefersLargeTitles = false
 
         // Do any additional setup after loading the view.
         link += id + "&class="

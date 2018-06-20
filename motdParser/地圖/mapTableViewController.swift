@@ -56,7 +56,7 @@ class mapTableViewController: UITableViewController, XMLParserDelegate, CLLocati
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.prefersLargeTitles = false
+//        navigationController?.navigationBar.prefersLargeTitles = false
         
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "003"))
         self.tableView.backgroundView?.contentMode = .scaleAspectFill

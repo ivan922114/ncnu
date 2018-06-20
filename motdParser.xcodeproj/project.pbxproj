@@ -10,7 +10,6 @@
 		0A99364B02411566E6EEDB45 /* Pods_motdParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93925E4075ADDF92B39AB5 /* Pods_motdParser.framework */; };
 		1608554720D0F66500B647C5 /* mapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1608554620D0F66500B647C5 /* mapDetailViewController.swift */; };
 		16107AC920CFBBBC00E20698 /* place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16107AC820CFBBBC00E20698 /* place.swift */; };
-		16107ACB20CFC02400E20698 /* xapi in Resources */ = {isa = PBXBuildFile; fileRef = 16107ACA20CFC02400E20698 /* xapi */; };
 		164B9F5020D6C12B00962EA3 /* motdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164B9F4F20D6C12B00962EA3 /* motdDetailsViewController.swift */; };
 		165D9C3C209960000036E8B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D9C3B209960000036E8B3 /* AppDelegate.swift */; };
 		165D9C41209960000036E8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165D9C3F209960000036E8B3 /* Main.storyboard */; };
@@ -25,7 +24,6 @@
 		AF139C0420D7820B006EAAB2 /* packageMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF139C0320D7820B006EAAB2 /* packageMenuTableViewController.swift */; };
 		AF139C0620D79B78006EAAB2 /* packageMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF139C0520D79B78006EAAB2 /* packageMenuTableViewCell.swift */; };
 		AF189ED120C66F0A0028D71E /* departmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECB20C66F0A0028D71E /* departmentTableViewController.swift */; };
-		AF189ED220C66F0A0028D71E /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = AF189ECC20C66F0A0028D71E /* data.xml */; };
 		AF189ED320C66F0A0028D71E /* coursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECD20C66F0A0028D71E /* coursesTableViewCell.swift */; };
 		AF189ED420C66F0A0028D71E /* courseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECE20C66F0A0028D71E /* courseDetailsViewController.swift */; };
 		AF189ED520C66F0A0028D71E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF189ECF20C66F0A0028D71E /* TableViewController.swift */; };
@@ -52,7 +50,6 @@
 /* Begin PBXFileReference section */
 		1608554620D0F66500B647C5 /* mapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapDetailViewController.swift; sourceTree = "<group>"; };
 		16107AC820CFBBBC00E20698 /* place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = place.swift; sourceTree = "<group>"; };
-		16107ACA20CFC02400E20698 /* xapi */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = xapi; sourceTree = "<group>"; };
 		164B9F4F20D6C12B00962EA3 /* motdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motdDetailsViewController.swift; sourceTree = "<group>"; };
 		165D9C38209960000036E8B3 /* motdParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motdParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165D9C3B209960000036E8B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		AF139C0320D7820B006EAAB2 /* packageMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageMenuTableViewController.swift; sourceTree = "<group>"; };
 		AF139C0520D79B78006EAAB2 /* packageMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageMenuTableViewCell.swift; sourceTree = "<group>"; };
 		AF189ECB20C66F0A0028D71E /* departmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = departmentTableViewController.swift; sourceTree = "<group>"; };
-		AF189ECC20C66F0A0028D71E /* data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data.xml; sourceTree = "<group>"; };
 		AF189ECD20C66F0A0028D71E /* coursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coursesTableViewCell.swift; sourceTree = "<group>"; };
 		AF189ECE20C66F0A0028D71E /* courseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseDetailsViewController.swift; sourceTree = "<group>"; };
 		AF189ECF20C66F0A0028D71E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +150,6 @@
 		16BC1E4220CADE8C00C6C666 /* 地圖 */ = {
 			isa = PBXGroup;
 			children = (
-				16107ACA20CFC02400E20698 /* xapi */,
 				AFACABF120CFB35C00E905A6 /* mapTableViewCell.swift */,
 				16BC1E4320CADEA400C6C666 /* mapViewController.swift */,
 				1608554620D0F66500B647C5 /* mapDetailViewController.swift */,
@@ -204,7 +199,6 @@
 		AF189ECA20C66EC60028D71E /* 課程查詢 */ = {
 			isa = PBXGroup;
 			children = (
-				AF189ECC20C66F0A0028D71E /* data.xml */,
 				AF189ED020C66F0A0028D71E /* Courses.swift */,
 				AF189ECD20C66F0A0028D71E /* coursesTableViewCell.swift */,
 				AF189ECE20C66F0A0028D71E /* courseDetailsViewController.swift */,
@@ -309,9 +303,7 @@
 				165D9C46209960010036E8B3 /* LaunchScreen.storyboard in Resources */,
 				AFEBDA7520C2CB0500AE8B79 /* setofont.ttf in Resources */,
 				AFA1E40E20D25B4D004EC5D2 /* wthc06.ttf in Resources */,
-				16107ACB20CFC02400E20698 /* xapi in Resources */,
 				AFA1E41020D25C89004EC5D2 /* wt006.ttf in Resources */,
-				AF189ED220C66F0A0028D71E /* data.xml in Resources */,
 				165D9C43209960010036E8B3 /* Assets.xcassets in Resources */,
 				165D9C41209960000036E8B3 /* Main.storyboard in Resources */,
 				AFEBDA7420C2CB0500AE8B79 /* setofont-ex.ttf in Resources */,
@@ -543,11 +535,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJM478WRFL;
 				INFOPLIST_FILE = motdParser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vipLab.ncnu;
+				PRODUCT_BUNDLE_IDENTIFIER = ncnu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -562,11 +555,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJM478WRFL;
 				INFOPLIST_FILE = motdParser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vipLab.ncnu;
+				PRODUCT_BUNDLE_IDENTIFIER = ncnu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

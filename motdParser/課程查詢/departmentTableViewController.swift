@@ -18,7 +18,7 @@ class departmentTableViewController: UITableViewController {
         
         self.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.prefersLargeTitles = false
+//        navigationController?.navigationBar.prefersLargeTitles = false
         
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "011"))
         self.tableView.backgroundView?.contentMode = .scaleAspectFill
